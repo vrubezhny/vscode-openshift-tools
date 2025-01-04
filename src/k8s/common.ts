@@ -6,10 +6,10 @@
 import { QuickPickItem, window } from 'vscode';
 
 import * as k8s from 'vscode-kubernetes-tools-api';
-import { CommandText } from '../base/command';
-import { CliChannel } from '../cli';
-import { VsCommandError } from '../vscommand';
-import { Node } from './node';
+import { CommandText } from '../base/command.js';
+import { CliChannel } from '../cli.js';
+import { VsCommandError } from '../vscommand.js';
+import { Node } from './node.js';
 
 function convertItemToQuickPick(item: any): QuickPickItem {
     const qp = item;

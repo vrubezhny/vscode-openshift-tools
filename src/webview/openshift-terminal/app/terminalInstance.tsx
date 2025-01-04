@@ -5,13 +5,13 @@
 
 import { Box, Button, Paper, Stack, Typography, debounce } from '@mui/material';
 import React from 'react';
-import { VSCodeMessage } from './vscodeMessage';
-import { Terminal, ITheme } from 'xterm';
+import { ITheme, Terminal } from 'xterm';
 import { FitAddon } from 'xterm-addon-fit';
 import { WebLinksAddon } from 'xterm-addon-web-links';
 import { WebglAddon } from 'xterm-addon-webgl';
 import 'xterm/css/xterm.css';
 import '../../common/scrollbar.scss';
+import { VSCodeMessage } from './vscodeMessage.js';
 
 /**
  * Clone of VS Code's context menu with "Copy", "Select All", and "Clear" items.

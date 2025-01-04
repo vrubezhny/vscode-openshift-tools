@@ -7,7 +7,7 @@ import * as chai from 'chai';
 import * as sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import { commands, Uri } from 'vscode';
-import { OpenShiftExplorer } from '../../src/explorer';
+import { OpenShiftExplorer } from '../../src/explorer.js';
 
 const {expect} = chai;
 chai.use(sinonChai);

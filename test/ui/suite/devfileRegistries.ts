@@ -5,10 +5,10 @@
 
 import { expect } from 'chai';
 import { ActivityBar, CustomTreeSection, EditorView, InputBox, SideBarView, ViewSection, VSBrowser, WebDriver } from 'vscode-extension-tester';
-import { OdoPreference } from '../../../src/odo/odoPreference';
-import { notificationExists } from '../common/conditions';
-import { VIEWS } from '../common/constants';
-import { RegistryWebViewEditor } from '../common/ui/webview/registryWebViewEditor';
+import { OdoPreference } from '../../../src/odo/odoPreference.js';
+import { notificationExists } from '../common/conditions.js';
+import { VIEWS } from '../common/constants.js';
+import { RegistryWebViewEditor } from '../common/ui/webview/registryWebViewEditor.js';
 
 export function testDevfileRegistries() {
     describe('Devfile Registries', () => {

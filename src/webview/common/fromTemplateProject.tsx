@@ -5,10 +5,10 @@
 import { Theme } from '@mui/material';
 import * as React from 'react';
 import 'react-dom';
-import { DevfileData, DevfileInfo } from '../../devfile-registry/devfileInfo';
-import { TemplateProjectIdentifier } from './devfile';
-import { DevfileSearch } from './devfileSearch';
-import { SetNameAndFolder } from './setNameAndFolder';
+import { DevfileData, DevfileInfo } from '../../devfile-registry/devfileInfo.js';
+import { TemplateProjectIdentifier } from './devfile.js';
+import { DevfileSearch } from './devfileSearch.js';
+import { SetNameAndFolder } from './setNameAndFolder.js';
 
 type CurrentPage = 'selectTemplateProject' | 'setNameAndFolder';
 

@@ -8,8 +8,8 @@ import * as path from 'path';
 import * as sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import * as tmp from 'tmp';
-import * as fs from '../../../src/util/utils';
-import { WatchUtil } from '../../../src/util/watch';
+import * as fs from '../../../src/util/utils.js';
+import { WatchUtil } from '../../../src/util/watch.js';
 
 const {expect} = chai;
 chai.use(sinonChai);

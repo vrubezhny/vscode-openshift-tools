@@ -5,13 +5,13 @@
 
 import * as vscode from 'vscode';
 import * as k8s from 'vscode-kubernetes-tools-api';
-import { CommandText } from '../base/command';
-import { CliChannel } from '../cli';
-import { isOpenShiftCluster } from '../util/kubeUtils';
-import { imagePath } from '../util/utils';
-import { Build } from './build';
-import { ClusterServiceVersion } from './csv';
-import { DeploymentConfig } from './deploymentConfig';
+import { CommandText } from '../base/command.js';
+import { CliChannel } from '../cli.js';
+import { isOpenShiftCluster } from '../util/kubeUtils.js';
+import { imagePath } from '../util/utils.js';
+import { Build } from './build.js';
+import { ClusterServiceVersion } from './csv.js';
+import { DeploymentConfig } from './deploymentConfig.js';
 
 let clusterExplorer: k8s.ClusterExplorerV1 | undefined;
 

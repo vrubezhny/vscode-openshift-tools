@@ -9,12 +9,12 @@ import * as fs from 'fs';
 import * as sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import { window, workspace } from 'vscode';
-import { CommandText } from '../../src/base/command';
-import { CliChannel } from '../../src/cli';
-import { Oc } from '../../src/oc/ocWrapper';
-import { Odo } from '../../src/odo/odoWrapper';
-import { ToolsConfig } from '../../src/tools';
-import { ChildProcessUtil, CliExitData } from '../../src/util/childProcessUtil';
+import { CommandText } from '../../src/base/command.js';
+import { CliChannel } from '../../src/cli.js';
+import { Oc } from '../../src/oc/ocWrapper.js';
+import { Odo } from '../../src/odo/odoWrapper.js';
+import { ToolsConfig } from '../../src/tools.js';
+import { ChildProcessUtil, CliExitData } from '../../src/util/childProcessUtil.js';
 
 const {expect} = chai;
 chai.use(sinonChai);

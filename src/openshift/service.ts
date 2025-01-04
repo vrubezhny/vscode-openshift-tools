@@ -4,8 +4,8 @@
  *-----------------------------------------------------------------------------------------------*/
 
 import { Disposable } from 'vscode';
-import { vsCommand } from '../vscommand';
-import CreateServiceViewLoader from '../webview/create-service/createServiceViewLoader';
+import { vsCommand } from '../vscommand.js';
+import CreateServiceViewLoader from '../webview/create-service/createServiceViewLoader.js';
 
 /**
  * Wraps commands that are used for interacting with services.

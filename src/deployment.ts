@@ -7,14 +7,14 @@ import { KubernetesObject } from '@kubernetes/client-node';
 import * as path from 'path';
 import validator from 'validator';
 import { Disposable, InputBox, QuickInputButtons, ThemeIcon, TreeItem, window } from 'vscode';
-import { CommandText } from './base/command';
-import { DeploymentPodObject, OpenShiftExplorer } from './explorer';
-import { Oc } from './oc/ocWrapper';
-import { validateRFC1123DNSLabel } from './openshift/nameValidator';
-import { inputValue, quickBtn } from './util/inputValue';
-import { Progress } from './util/progress';
-import { vsCommand } from './vscommand';
-import { OpenShiftTerminalManager } from './webview/openshift-terminal/openShiftTerminal';
+import { CommandText } from './base/command.js';
+import { DeploymentPodObject, OpenShiftExplorer } from './explorer.js';
+import { Oc } from './oc/ocWrapper.js';
+import { validateRFC1123DNSLabel } from './openshift/nameValidator.js';
+import { inputValue, quickBtn } from './util/inputValue.js';
+import { Progress } from './util/progress.js';
+import { vsCommand } from './vscommand.js';
+import { OpenShiftTerminalManager } from './webview/openshift-terminal/openShiftTerminal.js';
 
 export class Deployment implements Disposable {
     private static instance: Deployment;

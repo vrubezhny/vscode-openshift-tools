@@ -4,8 +4,8 @@
  *-----------------------------------------------------------------------------------------------*/
 import * as React from 'react';
 import { Uri } from 'vscode';
-import { DefaultProps } from '../../common/propertyTypes';
-import { CreateFunction } from './createFunction';
+import { DefaultProps } from '../../common/propertyTypes.js';
+import { CreateFunction } from './createFunction.js';
 import './home.scss';
 
 export class ServerlessFunction extends React.Component<DefaultProps, {

@@ -10,12 +10,12 @@ import * as path from 'path';
 import * as querystring from 'querystring';
 import { Disposable, Event, EventEmitter, FileChangeEvent, FileStat, FileSystemProvider, FileType, Uri } from 'vscode';
 
-import { CommandText } from '../../base/command';
-import { CliChannel } from '../../cli';
-import { helmSyntaxVersion, HelmSyntaxVersion } from '../../helm/helm';
-import { CliExitData } from '../../util/childProcessUtil';
-import { Progress } from '../../util/progress';
-import { Errorable } from './errorable';
+import { CommandText } from '../../base/command.js';
+import { CliChannel } from '../../cli.js';
+import { helmSyntaxVersion, HelmSyntaxVersion } from '../../helm/helm.js';
+import { CliExitData } from '../../util/childProcessUtil.js';
+import { Progress } from '../../util/progress.js';
+import { Errorable } from './errorable.js';
 
 export const K8S_RESOURCE_SCHEME = 'osmsx'; // Changed from 'k8smsx' to 'osmsx' to not make a conflict with k8s extension
 export const K8S_RESOURCE_SCHEME_READONLY = 'osmsxro'; // Changed from 'k8smsxro' to 'osmsxro' to not make a conflict with k8s extension

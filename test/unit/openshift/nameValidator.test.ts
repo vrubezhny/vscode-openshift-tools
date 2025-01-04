@@ -6,8 +6,8 @@
 import * as chai from 'chai';
 import * as sinon from 'sinon';
 import sinonChai from 'sinon-chai';
-import * as NameValidator from '../../../src/openshift/nameValidator';
-import { wait } from '../../../src/util/async';
+import * as NameValidator from '../../../src/openshift/nameValidator.js';
+import { wait } from '../../../src/util/async.js';
 
 const { expect } = chai;
 chai.use(sinonChai);

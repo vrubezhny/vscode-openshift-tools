@@ -10,7 +10,7 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "prettier",
+    "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -101,6 +101,7 @@
     "@typescript-eslint/no-var-requires": 1,
     "@typescript-eslint/no-unsafe-argument": 1,
     "@typescript-eslint/no-unused-expressions": 0,
+    "@typescript-eslint/no-redundant-type-constituents": 0,
     "no-var": 2,
     "object-shorthand": ["error", "properties"],
     "prefer-const": ["error", { "destructuring": "all" }],
@@ -118,7 +119,7 @@
     "jsdoc/no-types": "error",
     "jsdoc/require-param-name": "error",
     "jsdoc/require-returns-check": "error",
-    "jsdoc/require-returns-description": "error",
+    "jsdoc/require-returns-description": "error"
   },
   "overrides": [
     {

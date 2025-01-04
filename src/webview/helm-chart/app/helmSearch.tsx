@@ -10,11 +10,11 @@ import { TreeViewBaseItem } from '@mui/x-tree-view/models';
 import { RichTreeView } from '@mui/x-tree-view/RichTreeView';
 import { every } from 'lodash';
 import React from 'react';
-import { ChartResponse, HelmRepo } from '../../../helm/helmChartType';
-import { LoadScreen } from '../../common/loading';
-import { VSCodeMessage } from '../vsCodeMessage';
-import { HelmListItem } from './helmListItem';
-import { HelmModal } from './helmModal';
+import { ChartResponse, HelmRepo } from '../../../helm/helmChartType.js';
+import { LoadScreen } from '../../common/loading.js';
+import { VSCodeMessage } from '../vsCodeMessage.js';
+import { HelmListItem } from './helmListItem.js';
+import { HelmModal } from './helmModal.js';
 
 declare module '@mui/material/SvgIcon' {
     interface SvgIconPropsColorOverrides {

@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 import * as React from 'react';
-import { DefaultProps } from '../../common/propertyTypes';
+import { DefaultProps } from '../../common/propertyTypes.js';
 import './home.scss';
-import { ShowRepositories } from './showRepositories';
-import { VSCodeMessage } from './vsCodeMessage';
+import { ShowRepositories } from './showRepositories.js';
+import { VSCodeMessage } from './vsCodeMessage.js';
 
 export class ManageRepository extends React.Component<DefaultProps, object> {
 

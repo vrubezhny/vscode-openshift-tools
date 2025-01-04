@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 
-import { VSCodeSettings } from '@redhat-developer/vscode-redhat-telemetry/lib/common/vscode/settings';
 import * as cp from 'child_process';
 import hasha from 'hasha';
+import { VSCodeSettings } from 'ost-commonjs-exports';
 import * as vscode from 'vscode';
-import { CommandText } from './base/command';
-import { ToolsConfig } from './tools';
-import { ChildProcessUtil, CliExitData } from './util/childProcessUtil';
-import { VsCommandError } from './vscommand';
+import { CommandText } from './base/command.js';
+import { ToolsConfig } from './tools.js';
+import { ChildProcessUtil, CliExitData } from './util/childProcessUtil.js';
+import { VsCommandError } from './vscommand.js';
 
 export class ExecutionContext extends Map<string, any> {
     public static key(value: string): string {

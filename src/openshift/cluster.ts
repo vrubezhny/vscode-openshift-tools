@@ -3,26 +3,25 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 
-import { CoreV1Api, KubeConfig, KubernetesObject, V1Secret, V1ServiceAccount } from '@kubernetes/client-node';
-import { Cluster as KcuCluster, Context as KcuContext } from '@kubernetes/client-node/dist/config_types';
+import { CoreV1Api, CoreV1ApiCreateNamespacedSecretRequest, CoreV1ApiListNamespacedSecretRequest, CoreV1ApiListNamespacedServiceAccountRequest, Cluster as KcuCluster, Context as KcuContext, KubeConfig, KubernetesObject, V1Secret, V1SecretList, V1ServiceAccount, V1ServiceAccountList } from '@kubernetes/client-node';
 import * as https from 'https';
 import { Disposable, ExtensionContext, QuickInputButtons, QuickPickItem, QuickPickItemButtonEvent, ThemeIcon, Uri, commands, env, window, workspace } from 'vscode';
-import { CommandText } from '../base/command';
-import { CliChannel } from '../cli';
-import { OpenShiftExplorer } from '../explorer';
-import { Oc } from '../oc/ocWrapper';
-import { Command } from '../odo/command';
-import * as NameValidator from '../openshift/nameValidator';
-import { TokenStore } from '../util/credentialManager';
-import { Filters } from '../util/filters';
-import { inputValue, quickBtn } from '../util/inputValue';
-import { KubeConfigUtils } from '../util/kubeUtils';
-import { LoginUtil } from '../util/loginUtil';
-import { Platform } from '../util/platform';
-import { Progress } from '../util/progress';
-import { VsCommandError, vsCommand } from '../vscommand';
-import { OpenShiftTerminalManager } from '../webview/openshift-terminal/openShiftTerminal';
-import OpenShiftItem, { clusterRequired } from './openshiftItem';
+import { CommandText } from '../base/command.js';
+import { CliChannel } from '../cli.js';
+import { OpenShiftExplorer } from '../explorer.js';
+import { Oc } from '../oc/ocWrapper.js';
+import { Command } from '../odo/command.js';
+import * as NameValidator from '../openshift/nameValidator.js';
+import { TokenStore } from '../util/credentialManager.js';
+import { Filters } from '../util/filters.js';
+import { inputValue, quickBtn } from '../util/inputValue.js';
+import { KubeConfigUtils } from '../util/kubeUtils.js';
+import { LoginUtil } from '../util/loginUtil.js';
+import { Platform } from '../util/platform.js';
+import { Progress } from '../util/progress.js';
+import { VsCommandError, vsCommand } from '../vscommand.js';
+import { OpenShiftTerminalManager } from '../webview/openshift-terminal/openShiftTerminal.js';
+import OpenShiftItem, { clusterRequired } from './openshiftItem.js';
 
 export interface QuickPickItemExt extends QuickPickItem {
     name: string,
@@ -1086,6 +1085,7 @@ export class Cluster extends OpenShiftItem implements Disposable {
         const clusterProxy = {
             name: 'sandbox-proxy',
             server: proxy,
+            skipTLSVerify: false
         };
         const user = {
             name: 'sso-user',
@@ -1116,27 +1116,40 @@ export class Cluster extends OpenShiftItem implements Disposable {
                 }
             },
             type: 'kubernetes.io/service-account-token'
-        } as V1Secret
+        } as V1Secret;
+
+        const v1SecretRequest = {
+            namespace: `${username}-dev`,
+            body: v1Secret
+        } as CoreV1ApiCreateNamespacedSecretRequest;
 
         try {
-            await k8sApi.createNamespacedSecret(`${username}-dev`, v1Secret);
+            await k8sApi.createNamespacedSecret(v1SecretRequest);
         } catch {
             // Ignore
         }
-        const newSecrets = await k8sApi.listNamespacedSecret(`${username}-dev`);
-        return newSecrets?.body.items.find((secret) => secret.metadata.name === `pipeline-secret-${username}-dev`);
+        const newSecrets: V1SecretList = await k8sApi.listNamespacedSecret(v1SecretRequest);
+        return newSecrets?.items.find((secret) => secret.metadata.name === `pipeline-secret-${username}-dev`);
     }
 
     static async getPipelineServiceAccountToken(k8sApi: CoreV1Api, username: string): Promise<string> {
+        const v1ServiceAccountRequest = {
+            namespace: `${username}-dev`
+        } as CoreV1ApiListNamespacedServiceAccountRequest;
+
         try {
-            const serviceAccounts = await k8sApi.listNamespacedServiceAccount(`${username}-dev`);
-            const pipelineServiceAccount = serviceAccounts.body.items.find(serviceAccount => serviceAccount.metadata.name === 'pipeline');
+            const serviceAccounts: V1ServiceAccountList = await k8sApi.listNamespacedServiceAccount(v1ServiceAccountRequest);
+            const pipelineServiceAccount = serviceAccounts.items.find(serviceAccount => serviceAccount.metadata.name === 'pipeline');
             if (!pipelineServiceAccount) {
                 return;
             }
 
-            const secrets = await k8sApi.listNamespacedSecret(`${username}-dev`);
-            let pipelineTokenSecret = secrets?.body.items.find((secret) => secret.metadata.name === `pipeline-secret-${username}-dev`);
+            const v1ListNamespacedSecretRequest = {
+                namespace: `${username}-dev`
+            } as CoreV1ApiListNamespacedSecretRequest;
+
+            const secrets = await k8sApi.listNamespacedSecret(v1ListNamespacedSecretRequest);
+            let pipelineTokenSecret = secrets?.items.find((secret) => secret.metadata.name === `pipeline-secret-${username}-dev`);
             if (!pipelineTokenSecret) {
                 pipelineTokenSecret = await Cluster.installPipelineSecretToken(k8sApi, pipelineServiceAccount, username);
                 if (!pipelineTokenSecret) {

@@ -5,8 +5,8 @@
 
 import { Container, Theme, ThemeProvider } from '@mui/material';
 import React from 'react';
-import { FromTemplateProject } from '../../common/fromTemplateProject';
-import { createVSCodeTheme } from '../../common/vscode-theme';
+import { FromTemplateProject } from '../../common/fromTemplateProject.js';
+import { createVSCodeTheme } from '../../common/vscode-theme.js';
 
 type VSCodeMessage = {
     action: string;

@@ -4,8 +4,8 @@
  *-----------------------------------------------------------------------------------------------*/
 
 import { Disposable } from 'vscode';
-import { vsCommand } from '../vscommand';
-import CreateRouteViewLoader from '../webview/create-route/createRouteViewLoader';
+import { vsCommand } from '../vscommand.js';
+import CreateRouteViewLoader from '../webview/create-route/createRouteViewLoader.js';
 
 /**
  * Wraps commands that are used for interacting with routes.

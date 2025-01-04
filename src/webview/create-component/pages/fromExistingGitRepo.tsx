@@ -16,13 +16,13 @@ import {
     Typography
 } from '@mui/material';
 import * as React from 'react';
-import { DevfileData } from '../../../devfile-registry/devfileInfo';
-import { DevfileListItem } from '../../common/devfileListItem';
-import { RecommendationInfo } from '../../common/devfileRecommendationInfo';
-import { DevfileSearch } from '../../common/devfileSearch';
-import { NoSuitableWarning } from '../../common/noSuitableDevfile';
-import { buildSanitizedComponentName } from '../../common/sanitize';
-import { SetNameAndFolder } from '../../common/setNameAndFolder';
+import { DevfileData } from '../../../devfile-registry/devfileInfo.js';
+import { DevfileListItem } from '../../common/devfileListItem.js';
+import { RecommendationInfo } from '../../common/devfileRecommendationInfo.js';
+import { DevfileSearch } from '../../common/devfileSearch.js';
+import { NoSuitableWarning } from '../../common/noSuitableDevfile.js';
+import { buildSanitizedComponentName } from '../../common/sanitize.js';
+import { SetNameAndFolder } from '../../common/setNameAndFolder.js';
 
 type Message = {
     action: string;

@@ -4,7 +4,7 @@
  *-----------------------------------------------------------------------------------------------*/
 
 import { By, WebElement, WebView } from 'vscode-extension-tester';
-import { WebViewForm } from './WebViewForm';
+import { WebViewForm } from './WebViewForm.js';
 
 export class AddServiceBindingWebView extends WebViewForm {
     public constructor() {

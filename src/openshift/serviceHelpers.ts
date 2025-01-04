@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 
-import { ExecutionContext } from '../cli';
-import { K8sResourceKind } from '../k8s/olm/types';
-import { Oc } from '../oc/ocWrapper';
+import { ExecutionContext } from '../cli.js';
+import { K8sResourceKind } from '../k8s/olm/types.js';
+import { Oc } from '../oc/ocWrapper.js';
 import {
     ClusterServiceVersion,
     CustomResourceDefinitionStub,
-} from '../webview/common/createServiceTypes';
+} from '../webview/common/createServiceTypes.js';
 
 export async function getServiceKindStubs(executionContext?: ExecutionContext): Promise<CustomResourceDefinitionStub[]> {
     const clusterServiceVersions = (await Oc.Instance.getKubernetesObjects(

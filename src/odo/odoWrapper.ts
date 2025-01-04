@@ -4,13 +4,13 @@
  *-----------------------------------------------------------------------------------------------*/
 
 import { Uri, WorkspaceFolder, workspace } from 'vscode';
-import { CommandOption, CommandText } from '../base/command';
-import * as cliInstance from '../cli';
-import { ToolsConfig } from '../tools';
-import { ChildProcessUtil, CliExitData } from '../util/childProcessUtil';
-import { VsCommandError } from '../vscommand';
-import { Command } from './command';
-import { ComponentDescription } from './componentTypeDescription';
+import { CommandOption, CommandText } from '../base/command.js';
+import * as cliInstance from '../cli.js';
+import { ToolsConfig } from '../tools.js';
+import { ChildProcessUtil, CliExitData } from '../util/childProcessUtil.js';
+import { VsCommandError } from '../vscommand.js';
+import { Command } from './command.js';
+import { ComponentDescription } from './componentTypeDescription.js';
 
 /**
  * Wraps the `odo` cli tool.

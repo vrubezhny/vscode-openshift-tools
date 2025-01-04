@@ -39,10 +39,10 @@ import validator from '@rjsf/validator-ajv8';
 import * as React from 'react';
 import 'react-dom';
 import { Converter } from 'showdown';
-import type { CustomResourceDefinitionStub } from '../../common/createServiceTypes';
-import { ErrorPage } from '../../common/errorPage';
-import { LoadScreen } from '../../common/loading';
-import { createVSCodeTheme } from '../../common/vscode-theme';
+import type { CustomResourceDefinitionStub } from '../../common/createServiceTypes.js';
+import { ErrorPage } from '../../common/errorPage.js';
+import { LoadScreen } from '../../common/loading.js';
+import { createVSCodeTheme } from '../../common/vscode-theme.js';
 
 /**
  * A replacement for the RJSF object field component that resembles the one in Patternfly and allows collapsing.

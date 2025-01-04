@@ -4,9 +4,9 @@
  *-----------------------------------------------------------------------------------------------*/
 import * as path from 'path';
 import * as vscode from 'vscode';
-import sendTelemetry from '../../telemetry';
-import { ExtensionID } from '../../util/constants';
-import { loadWebviewHtml } from '../common-ext/utils';
+import sendTelemetry from '../../telemetry.js';
+import { ExtensionID } from '../../util/constants.js';
+import { loadWebviewHtml } from '../common-ext/utils.js';
 
 let panel: vscode.WebviewPanel | undefined;
 

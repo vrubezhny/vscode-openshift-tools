@@ -4,12 +4,12 @@
  *-----------------------------------------------------------------------------------------------*/
 import * as path from 'path';
 import * as vscode from 'vscode';
-import { OpenShiftExplorer } from '../../explorer';
-import { Oc } from '../../oc/ocWrapper';
-import { ExtensionID } from '../../util/constants';
-import { loadWebviewHtml, validateJSONValue, validatePath, validateURL } from '../common-ext/utils';
-import { getServices as getService } from '../../openshift/serviceHelpers';
-import type { CreateRoute } from '../common/route';
+import { OpenShiftExplorer } from '../../explorer.js';
+import { Oc } from '../../oc/ocWrapper.js';
+import { getServices as getService } from '../../openshift/serviceHelpers.js';
+import { ExtensionID } from '../../util/constants.js';
+import { loadWebviewHtml, validateJSONValue, validatePath, validateURL } from '../common-ext/utils.js';
+import type { CreateRoute } from '../common/route.js';
 
 export default class CreateRouteViewLoader {
     private static panel: vscode.WebviewPanel;

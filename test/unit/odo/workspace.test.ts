@@ -8,10 +8,10 @@ import * as path from 'path';
 import * as sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import * as vscode from 'vscode';
-import { ComponentDescription } from '../../../src/odo/componentTypeDescription';
-import { Odo } from '../../../src/odo/odoWrapper';
-import { OdoWorkspace } from '../../../src/odo/workspace';
-import * as fixtures from '../../fixtures';
+import { ComponentDescription } from '../../../src/odo/componentTypeDescription.js';
+import { Odo } from '../../../src/odo/odoWrapper.js';
+import { OdoWorkspace } from '../../../src/odo/workspace.js';
+import * as fixtures from '../../fixtures/index.js';
 
 const {expect} = chai;
 chai.use(sinonChai);

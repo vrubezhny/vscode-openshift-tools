@@ -8,18 +8,18 @@ import * as path from 'path';
 import * as tmp from 'tmp';
 import { promisify } from 'util';
 import { ColorTheme, commands, Disposable, extensions, Uri, ViewColumn, WebviewPanel, window } from 'vscode';
-import { Alizer } from '../../alizer/alizerWrapper';
-import { AlizerAnalyzeResponse } from '../../alizer/types';
-import { Oc } from '../../oc/ocWrapper';
-import { BuilderImage, BuilderImageWrapper, NormalizedBuilderImages } from '../../odo/builderImage';
-import sendTelemetry from '../../telemetry';
-import { ExtensionID } from '../../util/constants';
-import { vsCommand } from '../../vscommand';
+import { Alizer } from '../../alizer/alizerWrapper.js';
+import { AlizerAnalyzeResponse } from '../../alizer/types.js';
+import { Oc } from '../../oc/ocWrapper.js';
+import { BuilderImage, BuilderImageWrapper, NormalizedBuilderImages } from '../../odo/builderImage.js';
+import sendTelemetry from '../../telemetry.js';
+import { ExtensionID } from '../../util/constants.js';
+import { vsCommand } from '../../vscommand.js';
 import {
     validateName,
     validatePortNumber
-} from '../common-ext/createComponentHelpers';
-import { loadWebviewHtml, validateGitURL } from '../common-ext/utils';
+} from '../common-ext/createComponentHelpers.js';
+import { loadWebviewHtml, validateGitURL } from '../common-ext/utils.js';
 
 interface CloneProcess {
     status: boolean;

@@ -6,19 +6,19 @@
 import Dockerode from 'dockerode';
 import validator from 'validator';
 import { Uri, commands, window } from 'vscode';
-import { CliChannel, ExecutionContext } from '../cli';
-import { Oc } from '../oc/ocWrapper';
-import { Odo } from '../odo/odoWrapper';
-import { isTektonAware } from '../tekton/tekton';
-import { ChildProcessUtil, CliExitData } from '../util/childProcessUtil';
-import { getNamespaceKind, isOpenShiftCluster } from '../util/kubeUtils';
-import { Progress } from '../util/progress';
-import { OpenShiftTerminalApi, OpenShiftTerminalManager } from '../webview/openshift-terminal/openShiftTerminal';
-import { ServerlessCommand, Utils } from './commands';
-import { GitModel, getGitBranchInteractively, getGitRepoInteractively, getGitStateByPath } from './git/git';
-import { isKnativeServingAware } from './knative';
-import { multiStep } from './multiStepInput';
-import { FunctionContent, FunctionObject, FunctionSession } from './types';
+import { CliChannel, ExecutionContext } from '../cli.js';
+import { Oc } from '../oc/ocWrapper.js';
+import { Odo } from '../odo/odoWrapper.js';
+import { isTektonAware } from '../tekton/tekton.js';
+import { ChildProcessUtil, CliExitData } from '../util/childProcessUtil.js';
+import { getNamespaceKind, isOpenShiftCluster } from '../util/kubeUtils.js';
+import { Progress } from '../util/progress.js';
+import { OpenShiftTerminalApi, OpenShiftTerminalManager } from '../webview/openshift-terminal/openShiftTerminal.js';
+import { ServerlessCommand, Utils } from './commands.js';
+import { GitModel, getGitBranchInteractively, getGitRepoInteractively, getGitStateByPath } from './git/git.js';
+import { isKnativeServingAware } from './knative.js';
+import { multiStep } from './multiStepInput.js';
+import { FunctionContent, FunctionObject, FunctionSession } from './types.js';
 
 interface DockerStatus {
     error: boolean;

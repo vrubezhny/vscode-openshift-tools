@@ -4,9 +4,9 @@
  *-----------------------------------------------------------------------------------------------*/
 import { expect } from 'chai';
 import { ActivityBar, CustomTreeSection, SideBarView, ViewSection, WelcomeContentSection, Workbench } from 'vscode-extension-tester';
-import { BUTTONS, VIEWS } from '../common/constants';
-import { collapse } from '../common/overdrives';
-import { welcomeContentButtonsAreLoaded, welcomeContentIsLoaded } from '../common/conditions';
+import { welcomeContentButtonsAreLoaded, welcomeContentIsLoaded } from '../common/conditions.js';
+import { BUTTONS, VIEWS } from '../common/constants.js';
+import { collapse } from '../common/overdrives.js';
 
 export function checkOpenshiftView() {
     describe('OpenShift View', function() {

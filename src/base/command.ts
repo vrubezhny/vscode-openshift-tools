@@ -3,7 +3,7 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 
-import { Platform } from '../util/platform';
+import { Platform } from '../util/platform.js';
 
 const QUOTE = Platform.OS === 'win32' ? '"' : '\'';
 

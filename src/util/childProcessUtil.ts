@@ -5,8 +5,8 @@
 
 import { ExecException, ExecOptions } from 'child_process';
 import * as vscode from 'vscode';
-import * as cp from '../util/utils';
-import { Filters } from './filters';
+import * as cp from '../util/utils.js';
+import { Filters } from './filters.js';
 
 export interface CliExitData {
     readonly error: ExecException;

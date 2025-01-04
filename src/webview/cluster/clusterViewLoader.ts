@@ -7,15 +7,15 @@ import { ChildProcess, spawn } from 'child_process';
 import * as fs from 'fs';
 import * as path from 'path';
 import { authentication, AuthenticationSession, commands, ConfigurationTarget, Disposable, env, extensions, OutputChannel, Uri, ViewColumn, WebviewPanel, window, workspace } from 'vscode';
-import { CommandText } from '../../base/command';
-import { Cluster } from '../../openshift/cluster';
-import { createSandboxAPI } from '../../openshift/sandbox';
-import { ExtCommandTelemetryEvent } from '../../telemetry';
-import { ChildProcessUtil } from '../../util/childProcessUtil';
-import { ExtensionID } from '../../util/constants';
-import { vsCommand } from '../../vscommand';
-import { loadWebviewHtml } from '../common-ext/utils';
-import { OpenShiftTerminalManager } from '../openshift-terminal/openShiftTerminal';
+import { CommandText } from '../../base/command.js';
+import { Cluster } from '../../openshift/cluster.js';
+import { createSandboxAPI } from '../../openshift/sandbox.js';
+import { ExtCommandTelemetryEvent } from '../../telemetry.js';
+import { ChildProcessUtil } from '../../util/childProcessUtil.js';
+import { ExtensionID } from '../../util/constants.js';
+import { vsCommand } from '../../vscommand.js';
+import { loadWebviewHtml } from '../common-ext/utils.js';
+import { OpenShiftTerminalManager } from '../openshift-terminal/openShiftTerminal.js';
 
 let panel: WebviewPanel;
 
@@ -115,11 +115,27 @@ async function clusterEditorMessageListener (event: any ): Promise<any> {
                     if (signupStatus.status.ready) {
                         const oauthInfo = await sandboxAPI.getOauthServerInfo(signupStatus.apiEndpoint);
                         const makeCoreV1ApiClient = ((proxy: string, username: string, accessToken: string): CoreV1Api => {
+                            // public makeApiClient<T extends ApiType>(apiClientType: ApiConstructor<T>): T {
+                            //     const cluster = this.getCurrentCluster();
+                            //     if (!cluster) {
+                            //         throw new Error('No active cluster!');
+                            //     }
+                            //     const apiClient = new apiClientType(cluster.server);
+                            //     apiClient.setDefaultAuthentication(this);
+
+                            //     return apiClient;
+                            // }
+
                             const kcu = Cluster.prepareSSOInKubeConfig(proxy, username, accessToken);
-                            const apiClient = new CoreV1Api(proxy);
-                                apiClient.setDefaultAuthentication(kcu);
-                                return apiClient;
-                            });
+                            // const v1Configuration = {} as CoreV1ApiConfiguration
+                            // const apiClient = new CoreV1Api(kcu);
+                            // const apiClient = new CoreV1Api(kcu);
+                            // apiClient.setDefaultAuthentication(kcu);
+                            // return apiClient;
+                            const newApiClient: CoreV1Api = kcu.makeApiClient(CoreV1Api)
+                            // newApiClient.setDefaultAuthentication(kcu);
+                            return newApiClient;
+                        });
                         const pipelineAccountToken = await Cluster.getPipelineServiceAccountToken(
                                 makeCoreV1ApiClient(signupStatus.proxyURL, signupStatus.compliantUsername,
                                     (sessionCheck as any).idToken),

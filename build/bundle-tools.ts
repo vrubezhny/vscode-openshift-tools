@@ -8,8 +8,9 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { exit } from 'process';
-import { downloadFileAndCreateSha256 } from '../src/downloadUtil/downloadBinaries';
-import * as configData from '../src/tools.json';
+import { downloadFileAndCreateSha256 } from '../src/downloadUtil/downloadBinaries.js';
+
+import * as configData from '../src/tools.json' assert { type: 'json' };
 
 async function bundleTools(): Promise<void> {
     if (process.env.REMOTE_CONTAINERS === 'true') {

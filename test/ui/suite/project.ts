@@ -4,22 +4,22 @@
  *-----------------------------------------------------------------------------------------------*/
 
 import {
-    SideBarView,
-    ViewSection,
+    ActivityBar,
     EditorView,
     InputBox,
-    ActivityBar,
     NotificationType,
-    Workbench,
+    SideBarView,
     TreeItem,
     VSBrowser,
+    ViewSection,
+    Workbench,
+    after,
     before,
     beforeEach,
-    after,
 } from 'vscode-extension-tester';
-import { itemExists, notificationExists } from '../common/conditions';
-import { INPUTS, MENUS, NOTIFICATIONS, VIEWS } from '../common/constants';
-import { activateCommand } from '../common/command-activator';
+import { activateCommand } from '../common/command-activator.js';
+import { itemExists, notificationExists } from '../common/conditions.js';
+import { INPUTS, MENUS, NOTIFICATIONS, VIEWS } from '../common/constants.js';
 
 export function projectTest(isOpenshiftCluster: boolean) {
     describe('Work with project', function () {

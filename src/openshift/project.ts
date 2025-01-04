@@ -5,12 +5,12 @@
 
 import { KubernetesObject } from '@kubernetes/client-node';
 import { Disposable, commands, window } from 'vscode';
-import { OpenShiftExplorer } from '../explorer';
-import { Oc } from '../oc/ocWrapper';
-import { KubeConfigUtils, getNamespaceKind } from '../util/kubeUtils';
-import { Progress } from '../util/progress';
-import { VsCommandError, vsCommand } from '../vscommand';
-import OpenShiftItem from './openshiftItem';
+import { OpenShiftExplorer } from '../explorer.js';
+import { Oc } from '../oc/ocWrapper.js';
+import { KubeConfigUtils, getNamespaceKind } from '../util/kubeUtils.js';
+import { Progress } from '../util/progress.js';
+import { VsCommandError, vsCommand } from '../vscommand.js';
+import OpenShiftItem from './openshiftItem.js';
 
 export class Project extends OpenShiftItem implements Disposable {
     private static instance: Project;

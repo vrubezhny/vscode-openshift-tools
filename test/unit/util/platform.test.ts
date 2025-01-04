@@ -6,7 +6,7 @@
 import * as chai from 'chai';
 import * as sinon from 'sinon';
 import sinonChai from 'sinon-chai';
-import { Platform } from '../../../src/util/platform';
+import { Platform } from '../../../src/util/platform.js';
 
 const {expect} = chai;
 chai.use(sinonChai);

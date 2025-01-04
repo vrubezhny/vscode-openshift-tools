@@ -4,10 +4,10 @@
  *-----------------------------------------------------------------------------------------------*/
 import * as https from 'https';
 import * as YAML from 'js-yaml';
-import { ExecutionContext } from '../cli';
-import { Registry } from '../odo/componentType';
-import { OdoPreference } from '../odo/odoPreference';
-import { DevfileData, DevfileInfo } from './devfileInfo';
+import { ExecutionContext } from '../cli.js';
+import { Registry } from '../odo/componentType.js';
+import { OdoPreference } from '../odo/odoPreference.js';
+import { DevfileData, DevfileInfo } from './devfileInfo.js';
 
 export const DEVFILE_VERSION_LATEST: string = 'latest';
 

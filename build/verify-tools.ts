@@ -16,8 +16,9 @@ import * as mkdirp from 'mkdirp';
 import * as os from 'os';
 import * as path from 'path';
 import { exit } from 'shelljs';
-import { DownloadUtil } from '../src/downloadUtil/download';
-import * as configData from '../src/tools.json';
+import { DownloadUtil } from '../src/downloadUtil/download.js';
+
+import * as configData from '../src/tools.json' assert { type: 'json' };
 
 /**
  * Download reqURL to targetFolder and save it to fileName. Verify the downloaded file sha256 is matching sha256sum

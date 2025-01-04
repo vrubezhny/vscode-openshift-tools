@@ -5,11 +5,11 @@
 import * as fs from 'fs/promises';
 import * as path from 'path';
 import { WebviewPanel } from 'vscode';
-import { DevfileInfo } from '../../devfile-registry/devfileInfo';
-import { DevfileRegistry } from '../../devfile-registry/devfileRegistryWrapper';
-import { Registry } from '../../odo/componentType';
-import * as NameValidator from '../../openshift/nameValidator';
-import { ValidationResult, ValidationStatus } from '../common/validationResult';
+import { DevfileInfo } from '../../devfile-registry/devfileInfo.js';
+import { DevfileRegistry } from '../../devfile-registry/devfileRegistryWrapper.js';
+import { Registry } from '../../odo/componentType.js';
+import * as NameValidator from '../../openshift/nameValidator.js';
+import { ValidationResult, ValidationStatus } from '../common/validationResult.js';
 
 /**
  * Returns a ValidationResult indicating whether the project folder is valid.

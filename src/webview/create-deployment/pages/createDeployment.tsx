@@ -4,8 +4,8 @@
  *-----------------------------------------------------------------------------------------------*/
 import { Container, Theme, ThemeProvider } from '@mui/material';
 import * as React from 'react';
-import { createVSCodeTheme } from '../../common/vscode-theme';
-import { FromExistingGitRepo } from './fromExistingGitRepo';
+import { createVSCodeTheme } from '../../common/vscode-theme.js';
+import { FromExistingGitRepo } from './fromExistingGitRepo.js';
 
 interface VSCodeMessage {
     action: string;

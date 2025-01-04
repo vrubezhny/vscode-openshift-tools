@@ -2,7 +2,8 @@
  *  Copyright (c) Red Hat, Inc. All rights reserved.
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
-import * as React from 'react';
+import ConstructionIcon from '@mui/icons-material/Construction';
+import LoadingButton from '@mui/lab/LoadingButton';
 import {
     Button,
     FormControl,
@@ -12,12 +13,11 @@ import {
     Stack,
     Typography
 } from '@mui/material';
+import * as React from 'react';
 import 'react-dom';
-import { ComponentNameInput } from '../../common/componentNameInput';
-import { ErrorAlert } from '../../common/createComponentButton';
-import { BuilderImage } from '../../common/buildImage';
-import ConstructionIcon from '@mui/icons-material/Construction';
-import LoadingButton from '@mui/lab/LoadingButton';
+import { BuilderImage } from '../../common/buildImage.js';
+import { ComponentNameInput } from '../../common/componentNameInput.js';
+import { ErrorAlert } from '../../common/createComponentButton.js';
 
 type Message = {
     action: string;

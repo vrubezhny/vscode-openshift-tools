@@ -3,13 +3,14 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 
-import * as fs from 'fs';
+import fs from 'fs';
 import * as path from 'path';
 import type { Headers } from 'tar-fs';
 import * as unzipm from 'unzip-stream';
 import { promisify } from 'util';
 import * as zlib from 'zlib';
-import * as targz from '../util/utils';
+// import * as targz from '../util/utils.js';
+import tgz from 'targz';
 
 export class Archive {
     static extract(
@@ -54,7 +55,7 @@ export class Archive {
         fileName: string,
         prefix: string,
     ): Promise<void> {
-        return promisify(targz.decompress)({
+        return promisify(tgz.decompress)({
             src: zipFile,
             dest: extractTo,
             tar: {

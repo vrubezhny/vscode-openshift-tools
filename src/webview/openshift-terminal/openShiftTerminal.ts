@@ -22,12 +22,12 @@ import {
 } from 'vscode';
 import { SerializeAddon } from 'xterm-addon-serialize';
 import { Terminal } from 'xterm-headless';
-import { CommandText } from '../../base/command';
-import { CliChannel } from '../../cli';
-import { ToolsConfig } from '../../tools';
-import { getVscodeModule } from '../../util/credentialManager';
-import { Platform } from '../../util/platform';
-import { loadWebviewHtml } from '../common-ext/utils';
+import { CommandText } from '../../base/command.js';
+import { CliChannel } from '../../cli.js';
+import { ToolsConfig } from '../../tools.js';
+import { getVscodeModule } from '../../util/credentialManager.js';
+import { Platform } from '../../util/platform.js';
+import { loadWebviewHtml } from '../common-ext/utils.js';
 
 // HACK: we cannot include node-pty ourselves,
 // since the library can only be run under one version of node

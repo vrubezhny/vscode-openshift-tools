@@ -12,12 +12,13 @@ import {
     Stack,
     TextField,
     Theme,
-    Typography} from '@mui/material';
-import * as React from 'react';
-import { BuilderImage } from '../../common/buildImage';
-import { LoadScreen } from '../../common/loading';
-import { BuilderImageListItem } from '../../common/builderImageListItem';
+    Typography
+} from '@mui/material';
 import { every } from 'lodash';
+import * as React from 'react';
+import { BuilderImageListItem } from '../../common/builderImageListItem.js';
+import { BuilderImage } from '../../common/buildImage.js';
+import { LoadScreen } from '../../common/loading.js';
 
 // in order to add custom named colours for use in Material UI's `color` prop,
 // you need to use module augmentation.

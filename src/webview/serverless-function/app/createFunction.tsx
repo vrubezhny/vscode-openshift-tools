@@ -14,7 +14,7 @@ import QuarkusIcon from '../../../../images/serverlessfunctions/quarkus.svg';
 import RustIcon from '../../../../images/serverlessfunctions/rust.svg';
 import SpringBootIcon from '../../../../images/serverlessfunctions/spring boot.svg';
 import TypeScriptIcon from '../../../../images/serverlessfunctions/typescript.svg';
-import { CreateFunctionPageProps } from '../../common/propertyTypes';
+import { CreateFunctionPageProps } from '../../common/propertyTypes.js';
 import './home.scss';
 
 export class CreateFunction extends React.Component<CreateFunctionPageProps, {

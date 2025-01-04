@@ -2,10 +2,10 @@
  *  Copyright (c) Red Hat, Inc. All rights reserved.
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
-import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { ServerlessFunction } from './home';
-import { WebviewErrorBoundary } from '../../common/webviewErrorBoundary';
+import * as ReactDOM from 'react-dom';
+import { WebviewErrorBoundary } from '../../common/webviewErrorBoundary.js';
+import { ServerlessFunction } from './home.js';
 
 ReactDOM.render(
     <WebviewErrorBoundary webviewName='serverlessFunction'>

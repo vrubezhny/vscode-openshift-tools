@@ -16,12 +16,12 @@ import {
     Typography
 } from '@mui/material';
 import * as React from 'react';
-import { BuilderImage } from '../../common/buildImage';
-import { BuilderImageListItem } from '../../common/builderImageListItem';
-import { RecommendationInfo } from '../../common/devfileRecommendationInfo';
-import { NoSuitableWarning } from '../../common/noSuitableDevfile';
-import { BuilderConfiguration } from './builderConfig';
-import { SelectBuilderImage } from './selectBuilderImage';
+import { BuilderImage } from '../../common/buildImage.js';
+import { BuilderImageListItem } from '../../common/builderImageListItem.js';
+import { RecommendationInfo } from '../../common/devfileRecommendationInfo.js';
+import { NoSuitableWarning } from '../../common/noSuitableDevfile.js';
+import { BuilderConfiguration } from './builderConfig.js';
+import { SelectBuilderImage } from './selectBuilderImage.js';
 
 type Message = {
     action: string;

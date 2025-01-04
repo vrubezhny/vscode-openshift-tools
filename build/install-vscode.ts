@@ -5,11 +5,11 @@
 /* eslint-disable no-console */
 
 import * as testElectron from '@vscode/test-electron';
-import { platform } from 'os';
-
 import * as cp from 'child_process';
+import { platform } from 'os';
 import * as path from 'path';
-import * as packageJson from '../package.json';
+
+import * as packageJson from '../package.json' assert { type: 'json' };
 
 void testElectron.downloadAndUnzipVSCode().then((executable: string) => {
     // Install extensions that openshift-toolkit depends on

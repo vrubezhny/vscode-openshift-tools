@@ -5,7 +5,7 @@
 
 import parse from 'json-to-ast';
 import * as vscode from 'vscode';
-import { MappingItem, Node, NodeProvider } from './locator-util';
+import { MappingItem, Node, NodeProvider } from './locator-util.js';
 
 export interface ASTPosition {
     readonly line: number;

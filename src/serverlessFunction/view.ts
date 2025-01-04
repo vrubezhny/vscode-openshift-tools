@@ -20,13 +20,13 @@ import {
     window,
     workspace
 } from 'vscode';
-import { vsCommand } from '../vscommand';
-import { InvokeServerlessFunctionViewLoader } from '../webview/invoke-serverless-function/invokeServerlessFunctionLoader';
-import ServerlessFunctionViewLoader from '../webview/serverless-function/serverlessFunctionLoader';
-import ManageRepositoryViewLoader from '../webview/serverless-manage-repository/manageRepositoryLoader';
-import { ServerlessFunctionModel } from './functionModel';
-import { Functions } from './functions';
-import { FunctionContextType, FunctionObject, FunctionSession, FunctionStatus } from './types';
+import { vsCommand } from '../vscommand.js';
+import { InvokeServerlessFunctionViewLoader } from '../webview/invoke-serverless-function/invokeServerlessFunctionLoader.js';
+import ServerlessFunctionViewLoader from '../webview/serverless-function/serverlessFunctionLoader.js';
+import ManageRepositoryViewLoader from '../webview/serverless-manage-repository/manageRepositoryLoader.js';
+import { ServerlessFunctionModel } from './functionModel.js';
+import { Functions } from './functions.js';
+import { FunctionContextType, FunctionObject, FunctionSession, FunctionStatus } from './types.js';
 
 type ExplorerItem = KubernetesObject | FunctionObject | FunctionSession | Context | TreeItem;
 

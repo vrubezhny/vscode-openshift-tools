@@ -3,6 +3,8 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 import { expect } from 'chai';
+import * as fs from 'fs-extra';
+import * as yml from 'js-yaml';
 import {
     ActivityBar,
     EditorView,
@@ -14,17 +16,15 @@ import {
     VSBrowser,
     ViewSection,
     Workbench,
+    after,
     before,
     beforeEach,
-    after,
 } from 'vscode-extension-tester';
-import { activateCommand } from '../common/command-activator';
-import { itemExists, notificationExists } from '../common/conditions';
-import { ACTIONS, INPUTS, NOTIFICATIONS, VIEWS } from '../common/constants';
-import { collapse } from '../common/overdrives';
-import { addKubeContext, getKubeConfigContent, getKubeConfigPath } from '../common/kubeConfigUtils';
-import * as fs from 'fs-extra';
-import * as yml from 'js-yaml';
+import { activateCommand } from '../common/command-activator.js';
+import { itemExists, notificationExists } from '../common/conditions.js';
+import { ACTIONS, INPUTS, NOTIFICATIONS, VIEWS } from '../common/constants.js';
+import { addKubeContext, getKubeConfigContent, getKubeConfigPath } from '../common/kubeConfigUtils.js';
+import { collapse } from '../common/overdrives.js';
 
 export function kubernetesContextTest(isOpenshiftCluster: boolean) {
     describe('Kubernetes Context', function () {

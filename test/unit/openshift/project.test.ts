@@ -7,11 +7,11 @@ import * as chai from 'chai';
 import * as sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import * as vscode from 'vscode';
-import { CommandText } from '../../../src/base/command';
-import { Oc } from '../../../src/oc/ocWrapper';
-import { Project as OdoProject } from '../../../src/oc/project';
-import { Odo } from '../../../src/odo/odoWrapper';
-import { Project } from '../../../src/openshift/project';
+import { CommandText } from '../../../src/base/command.js';
+import { Oc } from '../../../src/oc/ocWrapper.js';
+import { Project as OdoProject } from '../../../src/oc/project.js';
+import { Odo } from '../../../src/odo/odoWrapper.js';
+import { Project } from '../../../src/openshift/project.js';
 
 const {expect} = chai;
 chai.use(sinonChai);

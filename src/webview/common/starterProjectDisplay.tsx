@@ -5,9 +5,8 @@
 import { Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import * as React from 'react';
-import { StarterProjectDisplayProps } from './propertyTypes';
-
-import starterProjectDisplayStyle from './starterProjectDisplay.style';
+import { StarterProjectDisplayProps } from './propertyTypes.js';
+import starterProjectDisplayStyle from './starterProjectDisplay.style.js';
 
 const useProjectStyles = makeStyles(starterProjectDisplayStyle);
 

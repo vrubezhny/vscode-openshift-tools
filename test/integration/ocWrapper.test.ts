@@ -10,13 +10,13 @@ import * as fs from 'fs/promises';
 import * as JSYAML from 'js-yaml';
 import * as tmp from 'tmp';
 import { promisify } from 'util';
-import { CommandText } from '../../src/base/command';
-import { CliChannel } from '../../src/cli';
-import { Oc } from '../../src/oc/ocWrapper';
-import { Project } from '../../src/oc/project';
-import { ClusterType } from '../../src/oc/types';
-import { isOpenShiftCluster } from '../../src/util/kubeUtils';
-import { LoginUtil } from '../../src/util/loginUtil';
+import { CommandText } from '../../src/base/command.js';
+import { CliChannel } from '../../src/cli.js';
+import { Oc } from '../../src/oc/ocWrapper.js';
+import { Project } from '../../src/oc/project.js';
+import { ClusterType } from '../../src/oc/types.js';
+import { isOpenShiftCluster } from '../../src/util/kubeUtils.js';
+import { LoginUtil } from '../../src/util/loginUtil.js';
 
 suite('./oc/ocWrapper.ts', function () {
     const isOpenShift: boolean = Boolean(parseInt(process.env.IS_OPENSHIFT, 10)) || false;

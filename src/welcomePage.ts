@@ -3,8 +3,8 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 import * as vscode from 'vscode';
-import { vsCommand } from './vscommand';
-import WelcomeViewLoader from './webview/welcome/welcomeViewLoader';
+import { vsCommand } from './vscommand.js';
+import WelcomeViewLoader from './webview/welcome/welcomeViewLoader.js';
 
 export class WelcomePage {
 

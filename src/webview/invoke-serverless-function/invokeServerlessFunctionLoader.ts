@@ -5,13 +5,13 @@
 import * as crypto from 'crypto';
 import * as path from 'path';
 import * as vscode from 'vscode';
-import { Odo } from '../../odo/odoWrapper';
-import { ServerlessCommand, Utils } from '../../serverlessFunction/commands';
-import { FunctionStatus, InvokeFunction } from '../../serverlessFunction/types';
-import sendTelemetry from '../../telemetry';
-import { selectWorkspaceFolder, selectWorkspaceFolders } from '../../util/workspace';
-import { getExtensionPath, loadWebviewHtml } from '../common-ext/utils';
-import { OpenShiftTerminalManager } from '../openshift-terminal/openShiftTerminal';
+import { Odo } from '../../odo/odoWrapper.js';
+import { ServerlessCommand, Utils } from '../../serverlessFunction/commands.js';
+import { FunctionStatus, InvokeFunction } from '../../serverlessFunction/types.js';
+import sendTelemetry from '../../telemetry.js';
+import { selectWorkspaceFolder, selectWorkspaceFolders } from '../../util/workspace.js';
+import { getExtensionPath, loadWebviewHtml } from '../common-ext/utils.js';
+import { OpenShiftTerminalManager } from '../openshift-terminal/openShiftTerminal.js';
 
 export class InvokeServerlessFunctionViewLoader {
 

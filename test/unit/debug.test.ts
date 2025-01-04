@@ -7,7 +7,7 @@ import * as chai from 'chai';
 import * as sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import { DebugSession, Disposable, debug } from 'vscode';
-import { DebugSessionsView } from '../../src/debug';
+import { DebugSessionsView } from '../../src/debug.js';
 
 const {expect} = chai;
 chai.use(sinonChai);

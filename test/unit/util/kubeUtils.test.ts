@@ -7,7 +7,7 @@ import * as chai from 'chai';
 import * as path from 'path';
 import * as sinon from 'sinon';
 import sinonChai from 'sinon-chai';
-import { KubeConfigUtils } from '../../../src/util/kubeUtils';
+import { KubeConfigUtils } from '../../../src/util/kubeUtils.js';
 
 const {expect} = chai;
 chai.use(sinonChai);

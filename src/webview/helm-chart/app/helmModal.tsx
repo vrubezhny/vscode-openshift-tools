@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 
+import { yaml } from '@codemirror/lang-yaml';
 import { Close } from '@mui/icons-material';
 import InstallDesktopIcon from '@mui/icons-material/InstallDesktop';
 import LoadingButton from '@mui/lab/LoadingButton';
 import { Alert, Box, FormControl, FormHelperText, IconButton, InputLabel, LinearProgress, MenuItem, Paper, Select, Stack, TextField, Theme, Typography, useMediaQuery } from '@mui/material';
-import React from 'react';
-import { Chart, ChartResponse } from '../../../helm/helmChartType';
-import { VSCodeMessage } from '../vsCodeMessage';
-import { HelmListItem } from './helmListItem';
 import CodeMirror from '@uiw/react-codemirror';
-import { yaml } from '@codemirror/lang-yaml';
-import { vsDarkCodeMirrorTheme, vsLightCodeMirrorTheme } from '../../common/vscode-theme';
 import jsyaml from 'js-yaml';
+import React from 'react';
+import { Chart, ChartResponse } from '../../../helm/helmChartType.js';
+import { vsDarkCodeMirrorTheme, vsLightCodeMirrorTheme } from '../../common/vscode-theme.js';
+import { VSCodeMessage } from '../vsCodeMessage.js';
+import { HelmListItem } from './helmListItem.js';
 
 type Message = {
     action: string;

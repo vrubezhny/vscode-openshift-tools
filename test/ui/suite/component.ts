@@ -5,10 +5,8 @@
 
 import { expect } from 'chai';
 import { ActivityBar, EditorView, InputBox, NotificationType, SideBarView, TerminalView, TreeItem, VSBrowser, ViewSection, Workbench } from 'vscode-extension-tester';
-import { notificationExists, itemExists, terminalHasText } from '../common/conditions';
-import { VIEWS, MENUS, NOTIFICATIONS, INPUTS, COMPONENTS } from '../common/constants';
-
-
+import { itemExists, notificationExists, terminalHasText } from '../common/conditions.js';
+import { COMPONENTS, INPUTS, MENUS, NOTIFICATIONS, VIEWS } from '../common/constants.js';
 
 export function createComponentTest(contextFolder: string) {
     describe('Component creation', function () {

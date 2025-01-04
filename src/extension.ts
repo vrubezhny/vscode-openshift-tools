@@ -3,7 +3,8 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 
-import { Context as KcuContext } from '@kubernetes/client-node/dist/config_types';
+// import { Context as KcuContext } from '@kubernetes/client-node/dist/config_types';
+import { Context as KcuContext } from '@kubernetes/client-node';
 import {
     authentication,
     commands, env, ExtensionContext, languages, QuickPickItemKind,
@@ -12,46 +13,46 @@ import {
     workspace
 } from 'vscode';
 import { extension as k8sExtension } from 'vscode-kubernetes-tools-api';
-import { REDHAT_CLOUD_PROVIDER } from './cloudProvider/redhatCloudProvider';
-import { ComponentsTreeDataProvider } from './componentsView';
-import { DebugSessionsView } from './debug';
-import { Deployment } from './deployment';
-import { OpenShiftExplorer } from './explorer';
-import { Feedback } from './feedback';
-import { ManageRepository as HelmManageRepository } from './helm/manageRepository';
-import { verifyBinariesInRemoteContainer } from './installToolsInRemote';
-import { Build as K8sBuild } from './k8s/build';
-import { extendClusterExplorer } from './k8s/clusterExplorer';
-import { Console as K8sConsole } from './k8s/console';
-import { DeploymentConfig as K8sDeploymentConfig } from './k8s/deploymentConfig';
-import { Route as K8sRoute } from './k8s/route';
-import { KubernetesResourceLinkProvider } from './k8s/vfs/kuberesources.linkprovider';
-import { K8S_RESOURCE_SCHEME, K8S_RESOURCE_SCHEME_READONLY, KubernetesResourceVirtualFileSystemProvider } from './k8s/vfs/kuberesources.virtualfs';
-import { Oc } from './oc/ocWrapper';
-import { OdoPreference } from './odo/odoPreference';
-import { Cluster } from './openshift/cluster';
-import { Component } from './openshift/component';
-import { Project as OpenshiftProject } from './openshift/project';
-import { Route as OpenshiftRoute } from './openshift/route';
-import { Service as OpenshiftService } from './openshift/service';
-import { ComponentTypesView } from './registriesView';
-import { ManageRepository as ServerlessManageRepository } from './serverlessFunction/manageRepository';
-import { ServerlessFunctionView } from './serverlessFunction/view';
-import { startTelemetry } from './telemetry';
-import { ToolsConfig } from './tools';
-import { TokenStore } from './util/credentialManager';
-import { getNamespaceKind, KubeConfigUtils, setKubeConfig } from './util/kubeUtils';
-import { setupWorkspaceDevfileContext } from './util/workspace';
-import { registerCommands } from './vscommand';
-import ClusterViewLoader from './webview/cluster/clusterViewLoader';
-import CreateDeploymentLoader from './webview/create-deployment/createDeploymentLoader';
-import RegistryViewLoader from './webview/devfile-registry/registryViewLoader';
-import HelmChartLoader, { HelmCommand } from './webview/helm-chart/helmChartLoader';
-import ManageRepositoryViewLoader from './webview/helm-manage-repository/manageRepositoryLoader';
-import { OpenShiftTerminalManager } from './webview/openshift-terminal/openShiftTerminal';
-import { WelcomePage } from './welcomePage';
-import { registerYamlHandlers } from './yaml/yamlDocumentFeatures';
-import { YamlFileCommands } from './yamlFileCommands';
+import { REDHAT_CLOUD_PROVIDER } from './cloudProvider/redhatCloudProvider.js';
+import { ComponentsTreeDataProvider } from './componentsView.js';
+import { DebugSessionsView } from './debug.js';
+import { Deployment } from './deployment.js';
+import { OpenShiftExplorer } from './explorer.js';
+import { Feedback } from './feedback.js';
+import { ManageRepository as HelmManageRepository } from './helm/manageRepository.js';
+import { verifyBinariesInRemoteContainer } from './installToolsInRemote.js';
+import { Build as K8sBuild } from './k8s/build.js';
+import { extendClusterExplorer } from './k8s/clusterExplorer.js';
+import { Console as K8sConsole } from './k8s/console.js';
+import { DeploymentConfig as K8sDeploymentConfig } from './k8s/deploymentConfig.js';
+import { Route as K8sRoute } from './k8s/route.js';
+import { KubernetesResourceLinkProvider } from './k8s/vfs/kuberesources.linkprovider.js';
+import { K8S_RESOURCE_SCHEME, K8S_RESOURCE_SCHEME_READONLY, KubernetesResourceVirtualFileSystemProvider } from './k8s/vfs/kuberesources.virtualfs.js';
+import { Oc } from './oc/ocWrapper.js';
+import { OdoPreference } from './odo/odoPreference.js';
+import { Cluster } from './openshift/cluster.js';
+import { Component } from './openshift/component.js';
+import { Project as OpenshiftProject } from './openshift/project.js';
+import { Route as OpenshiftRoute } from './openshift/route.js';
+import { Service as OpenshiftService } from './openshift/service.js';
+import { ComponentTypesView } from './registriesView.js';
+import { ManageRepository as ServerlessManageRepository } from './serverlessFunction/manageRepository.js';
+import { ServerlessFunctionView } from './serverlessFunction/view.js';
+import { startTelemetry } from './telemetry.js';
+import { ToolsConfig } from './tools.js';
+import { TokenStore } from './util/credentialManager.js';
+import { getNamespaceKind, KubeConfigUtils, setKubeConfig } from './util/kubeUtils.js';
+import { setupWorkspaceDevfileContext } from './util/workspace.js';
+import { registerCommands } from './vscommand.js';
+import ClusterViewLoader from './webview/cluster/clusterViewLoader.js';
+import CreateDeploymentLoader from './webview/create-deployment/createDeploymentLoader.js';
+import RegistryViewLoader from './webview/devfile-registry/registryViewLoader.js';
+import HelmChartLoader, { HelmCommand } from './webview/helm-chart/helmChartLoader.js';
+import ManageRepositoryViewLoader from './webview/helm-manage-repository/manageRepositoryLoader.js';
+import { OpenShiftTerminalManager } from './webview/openshift-terminal/openShiftTerminal.js';
+import { WelcomePage } from './welcomePage.js';
+import { registerYamlHandlers } from './yaml/yamlDocumentFeatures.js';
+import { YamlFileCommands } from './yamlFileCommands.js';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
 // this method is called when your extension is deactivated

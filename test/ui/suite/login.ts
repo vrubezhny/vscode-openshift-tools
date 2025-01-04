@@ -5,10 +5,10 @@
 
 import { expect } from 'chai';
 import { ActivityBar, InputBox, SideBarView, VSBrowser, ViewSection } from 'vscode-extension-tester';
-import { activateCommand } from '../common/command-activator';
-import { itemExists, notificationExists } from '../common/conditions';
-import { INPUTS, NOTIFICATIONS, VIEWS } from '../common/constants';
-import { collapse } from '../common/overdrives';
+import { activateCommand } from '../common/command-activator.js';
+import { itemExists, notificationExists } from '../common/conditions.js';
+import { INPUTS, NOTIFICATIONS, VIEWS } from '../common/constants.js';
+import { collapse } from '../common/overdrives.js';
 
 export function loginTest() {
     describe('Login', function () {

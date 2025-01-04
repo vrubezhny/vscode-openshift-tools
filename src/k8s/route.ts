@@ -4,8 +4,8 @@
  *-----------------------------------------------------------------------------------------------*/
 import { KubeConfig } from '@kubernetes/client-node';
 import { commands, Disposable, Uri } from 'vscode';
-import { Oc } from '../oc/ocWrapper';
-import { vsCommand, VsCommandError } from '../vscommand';
+import { Oc } from '../oc/ocWrapper.js';
+import { vsCommand, VsCommandError } from '../vscommand.js';
 
 export class Route implements Disposable {
     private static instance: Route;

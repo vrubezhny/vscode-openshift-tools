@@ -5,12 +5,12 @@
 
 import { Disposable, QuickPickItem, window } from 'vscode';
 import { ClusterExplorerV1 } from 'vscode-kubernetes-tools-api';
-import { CommandOption, CommandText } from '../base/command';
-import { CliChannel } from '../cli';
-import { Progress } from '../util/progress';
-import { VsCommandError, vsCommand } from '../vscommand';
-import { OpenShiftTerminalManager } from '../webview/openshift-terminal/openShiftTerminal';
-import * as common from './common';
+import { CommandOption, CommandText } from '../base/command.js';
+import { CliChannel } from '../cli.js';
+import { Progress } from '../util/progress.js';
+import { VsCommandError, vsCommand } from '../vscommand.js';
+import { OpenShiftTerminalManager } from '../webview/openshift-terminal/openShiftTerminal.js';
+import * as common from './common.js';
 
 export class DeploymentConfig implements Disposable {
     private static instance: DeploymentConfig;

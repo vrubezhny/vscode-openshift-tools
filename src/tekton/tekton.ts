@@ -3,8 +3,8 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 
-import { CommandText } from '../base/command';
-import { CliChannel, ExecutionContext } from '../cli';
+import { CommandText } from '../base/command.js';
+import { CliChannel, ExecutionContext } from '../cli.js';
 
 /**
  * Returns true if the cluster has the Tekton CRDs, and false otherwise.

@@ -14,14 +14,14 @@ import * as path from 'path';
 import * as sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import * as vscode from 'vscode';
-import { CommandText } from '../../src/base/command';
-import { Oc } from '../../src/oc/ocWrapper';
-import { Project } from '../../src/oc/project';
-import { Odo } from '../../src/odo/odoWrapper';
-import { getNamespaceKind } from '../../src/util/kubeUtils';
-import { Progress } from '../../src/util/progress';
+import { CommandText } from '../../src/base/command.js';
+import { Oc } from '../../src/oc/ocWrapper.js';
+import { Project } from '../../src/oc/project.js';
+import { Odo } from '../../src/odo/odoWrapper.js';
+import { getNamespaceKind } from '../../src/util/kubeUtils.js';
+import { Progress } from '../../src/util/progress.js';
 
-import * as packagejson from '../../package.json';
+import * as packagejson from '../../package.json' assert { type: 'json' };
 
 const {expect} = chai;
 chai.use(sinonChai);

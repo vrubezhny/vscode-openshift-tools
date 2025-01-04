@@ -6,7 +6,7 @@
 import * as fs from 'fs-extra';
 import * as path from 'path';
 import { commands, Disposable, QuickPickItem, Uri, window, workspace, WorkspaceFolder } from 'vscode';
-import { Platform } from './platform';
+import { Platform } from './platform.js';
 
 interface WorkspaceFolderItem extends QuickPickItem {
     uri: Uri;

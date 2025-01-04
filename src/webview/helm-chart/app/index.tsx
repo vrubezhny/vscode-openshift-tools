@@ -5,8 +5,8 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Home } from './home';
-import { WebviewErrorBoundary } from '../../common/webviewErrorBoundary';
+import { WebviewErrorBoundary } from '../../common/webviewErrorBoundary.js';
+import { Home } from './home.js';
 
 ReactDOM.render(
     <WebviewErrorBoundary webviewName='helmChart'>

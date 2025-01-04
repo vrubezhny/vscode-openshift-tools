@@ -4,8 +4,8 @@
  *-----------------------------------------------------------------------------------------------*/
 
 import { EventEmitter, workspace, WorkspaceFolder } from 'vscode';
-import { ComponentDescription } from './componentTypeDescription';
-import { Odo } from './odoWrapper';
+import { ComponentDescription } from './componentTypeDescription.js';
+import { Odo } from './odoWrapper.js';
 
 export interface ComponentWorkspaceFolder {
     contextPath: string;

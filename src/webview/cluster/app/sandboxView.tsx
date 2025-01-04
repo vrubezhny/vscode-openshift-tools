@@ -12,7 +12,7 @@ import * as React from 'react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import './clusterView.scss';
-import { ClusterViewTheme } from './clusterView.style';
+import { ClusterViewTheme } from './clusterView.style.js';
 
 const CodeTextField = styled(TextField)({
     verticalAlign: 'middle',

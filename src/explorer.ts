@@ -22,24 +22,24 @@ import {
     window,
     workspace
 } from 'vscode';
-import { CommandOption, CommandText } from './base/command';
-import { ExecutionContext } from './cli';
-import * as Helm from './helm/helm';
-import { HelmRepo } from './helm/helmChartType';
-import { getOutputFormat, helmfsUri, kubefsUri } from './k8s/vfs/kuberesources.virtualfs';
-import { Oc } from './oc/ocWrapper';
-import { Component } from './openshift/component';
-import { getServiceKindStubs, getServices } from './openshift/serviceHelpers';
-import { PortForward } from './port-forward';
-import { KubeConfigUtils, getKubeConfigFiles, getNamespaceKind, isOpenShiftCluster } from './util/kubeUtils';
-import { LoginUtil } from './util/loginUtil';
-import { Platform } from './util/platform';
-import { Progress } from './util/progress';
-import { imagePath } from './util/utils';
-import { FileContentChangeNotifier, WatchUtil } from './util/watch';
-import { vsCommand } from './vscommand';
-import { CustomResourceDefinitionStub, K8sResourceKind } from './webview/common/createServiceTypes';
-import { OpenShiftTerminalManager } from './webview/openshift-terminal/openShiftTerminal';
+import { CommandOption, CommandText } from './base/command.js';
+import { ExecutionContext } from './cli.js';
+import * as Helm from './helm/helm.js';
+import { HelmRepo } from './helm/helmChartType.js';
+import { getOutputFormat, helmfsUri, kubefsUri } from './k8s/vfs/kuberesources.virtualfs.js';
+import { Oc } from './oc/ocWrapper.js';
+import { Component } from './openshift/component.js';
+import { getServiceKindStubs, getServices } from './openshift/serviceHelpers.js';
+import { PortForward } from './port-forward.js';
+import { KubeConfigUtils, getKubeConfigFiles, getNamespaceKind, isOpenShiftCluster } from './util/kubeUtils.js';
+import { LoginUtil } from './util/loginUtil.js';
+import { Platform } from './util/platform.js';
+import { Progress } from './util/progress.js';
+import { imagePath } from './util/utils.js';
+import { FileContentChangeNotifier, WatchUtil } from './util/watch.js';
+import { vsCommand } from './vscommand.js';
+import { CustomResourceDefinitionStub, K8sResourceKind } from './webview/common/createServiceTypes.js';
+import { OpenShiftTerminalManager } from './webview/openshift-terminal/openShiftTerminal.js';
 
 type ExplorerItem = KubernetesObject | Helm.HelmRelease | Context | TreeItem | OpenShiftObject | HelmRepo;
 

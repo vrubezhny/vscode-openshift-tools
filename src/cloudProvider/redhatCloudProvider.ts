@@ -5,9 +5,9 @@
 import * as path from 'path';
 import * as vscode from 'vscode';
 import * as k8s from 'vscode-kubernetes-tools-api';
-import { createSandboxAPI, SBSignupResponse } from '../openshift/sandbox';
-import { vsCommand } from '../vscommand';
-import ClusterViewLoader from '../webview/cluster/clusterViewLoader';
+import { createSandboxAPI, SBSignupResponse } from '../openshift/sandbox.js';
+import { vsCommand } from '../vscommand.js';
+import ClusterViewLoader from '../webview/cluster/clusterViewLoader.js';
 
 const sandboxAPI = createSandboxAPI();
 

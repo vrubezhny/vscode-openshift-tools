@@ -3,14 +3,13 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 
-import { KubeConfig, findHomeDir, loadYaml } from '@kubernetes/client-node';
-import { Cluster, Context, User } from '@kubernetes/client-node/dist/config_types';
+import { Cluster, Context, KubeConfig, User, findHomeDir, loadYaml } from '@kubernetes/client-node';
 import * as fs from 'fs';
 import * as path from 'path';
 import { QuickPickItem, window } from 'vscode';
-import { CommandText } from '../base/command';
-import { CliChannel, ExecutionContext } from '../cli';
-import { Platform } from './platform';
+import { CommandText } from '../base/command.js';
+import { CliChannel, ExecutionContext } from '../cli.js';
+import { Platform } from './platform.js';
 
 function fileExists(file: string): boolean {
     try {

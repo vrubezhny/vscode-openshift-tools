@@ -4,7 +4,7 @@
  *-----------------------------------------------------------------------------------------------*/
 
 import validator from 'validator';
-import { CommandOption, CommandText } from '../base/command';
+import { CommandOption, CommandText } from '../base/command.js';
 
 export function addHelmRepo(repoName: string, url: string): CommandText {
     return new CommandText('helm', `repo add ${repoName} ${url}`);

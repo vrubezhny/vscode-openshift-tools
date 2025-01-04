@@ -7,15 +7,15 @@ import * as fs from 'fs/promises';
 import * as JSYAML from 'js-yaml';
 import * as path from 'path';
 import * as vscode from 'vscode';
-import { Odo } from '../../odo/odoWrapper';
-import { ServerlessCommand, Utils } from '../../serverlessFunction/commands';
-import sendTelemetry from '../../telemetry';
-import { CliExitData } from '../../util/childProcessUtil';
-import { Platform } from '../../util/platform';
-import { Progress } from '../../util/progress';
-import { selectWorkspaceFolder, selectWorkspaceFolders } from '../../util/workspace';
-import { VsCommandError } from '../../vscommand';
-import { getExtensionPath, loadWebviewHtml, validateName } from '../common-ext/utils';
+import { Odo } from '../../odo/odoWrapper.js';
+import { ServerlessCommand, Utils } from '../../serverlessFunction/commands.js';
+import sendTelemetry from '../../telemetry.js';
+import { CliExitData } from '../../util/childProcessUtil.js';
+import { Platform } from '../../util/platform.js';
+import { Progress } from '../../util/progress.js';
+import { selectWorkspaceFolder, selectWorkspaceFolders } from '../../util/workspace.js';
+import { VsCommandError } from '../../vscommand.js';
+import { getExtensionPath, loadWebviewHtml, validateName } from '../common-ext/utils.js';
 
 export interface ServiceBindingFormResponse {
     selectedService: string;

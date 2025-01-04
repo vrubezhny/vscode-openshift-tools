@@ -6,7 +6,7 @@ import { Box, CircularProgress, Typography } from '@mui/material';
 import LinearProgress from '@mui/material/LinearProgress';
 import { makeStyles } from '@mui/styles';
 import * as React from 'react';
-import loaderStyle from './loading.style';
+import loaderStyle from './loading.style.js';
 
 interface LoadProps extends React.AllHTMLAttributes<HTMLDivElement> {
     title: string,

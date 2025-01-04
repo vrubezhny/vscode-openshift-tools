@@ -4,8 +4,8 @@
  *-----------------------------------------------------------------------------------------------*/
 
 import { expect } from 'chai';
-import { Oc } from '../../src/oc/ocWrapper';
-import { LoginUtil } from '../../src/util/loginUtil';
+import { Oc } from '../../src/oc/ocWrapper.js';
+import { LoginUtil } from '../../src/util/loginUtil.js';
 
 suite('loginUtil.ts', function () {
 

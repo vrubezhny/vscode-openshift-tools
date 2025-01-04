@@ -6,9 +6,9 @@
 import * as fs from 'fs/promises';
 import * as YAML from 'js-yaml';
 import * as path from 'path';
-import { TelemetryProps } from '../telemetry';
-import { Platform } from '../util/platform';
-import { Registry } from './componentType';
+import { TelemetryProps } from '../telemetry.js';
+import { Platform } from '../util/platform.js';
+import { Registry } from './componentType.js';
 
 
 type OdoRegistryObject = {

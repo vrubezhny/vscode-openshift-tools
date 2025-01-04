@@ -4,9 +4,9 @@
  *-----------------------------------------------------------------------------------------------*/
 
 import { Disposable, window } from 'vscode';
-import { Oc } from './oc/ocWrapper';
-import { clusterRequired, projectRequired } from './openshift/openshiftItem';
-import { vsCommand } from './vscommand';
+import { Oc } from './oc/ocWrapper.js';
+import { clusterRequired, projectRequired } from './openshift/openshiftItem.js';
+import { vsCommand } from './vscommand.js';
 
 export class YamlFileCommands implements Disposable {
     private static instance: YamlFileCommands;

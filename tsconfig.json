@@ -1,19 +1,26 @@
 {
     "compilerOptions": {
         "jsx": "react",
-        "module": "commonjs",
-        "target": "es6",
-        "outDir": "out",
+        "module": "ESNext",
+        "target": "ES2020",
+        "moduleResolution": "node",
         "lib": [
-            "es6",
+            "es2023",
             "dom"
         ],
+        "outDir": "out",
         "typeRoots": [
-            "./src/@types"
+            "./src/@types",
+            "./node_modules/@types",
+            // "./node_modules/@devfile/api"
         ],
+/*        "paths": {
+            "@devfile/api": ["./node_modules/@devfile/api"]
+        }, */
         "sourceMap": true,
         "rootDir": ".",
         "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
         /* Strict Type-Checking Option */
         "strict": false,   /* enable all strict type-checking options */
         /* Additional Checks */
@@ -38,6 +45,7 @@
         "src/webview/create-component/pages",
         "src/webview/create-deployment/pages",
         "src/webview/devfile-registry/app",
+        "src/webview/invoke-serverless-function/app",
         "src/webview/welcome/app",
         "src/webview/git-import/app",
         "src/webview/helm-chart/app",

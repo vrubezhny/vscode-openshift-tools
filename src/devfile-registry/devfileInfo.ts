@@ -3,8 +3,8 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 
-import { Registry } from '../odo/componentType';
-import { Data } from '../odo/componentTypeDescription';
+import { Registry } from '../odo/componentType.js';
+import { Data } from '../odo/componentTypeDescription.js';
 
 export type DevfileRegistryInfo = Registry;
 

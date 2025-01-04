@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 
-import { CommandOption, CommandText } from '../base/command';
-import { CliChannel } from '../cli';
-import { Oc } from '../oc/ocWrapper';
-import { isOpenShiftCluster } from './kubeUtils';
+import { CommandOption, CommandText } from '../base/command.js';
+import { CliChannel } from '../cli.js';
+import { Oc } from '../oc/ocWrapper.js';
+import { isOpenShiftCluster } from './kubeUtils.js';
 
 export class LoginUtil {
 

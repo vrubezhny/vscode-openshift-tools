@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 import { window } from 'vscode';
-import { CommandText } from '../base/command';
-import { CliChannel } from '../cli';
-import sendTelemetry from '../telemetry';
-import { CliExitData } from '../util/childProcessUtil';
-import { HelmRepo } from './helmChartType';
-import * as HelmCommands from './helmCommands';
+import { CommandText } from '../base/command.js';
+import { CliChannel } from '../cli.js';
+import sendTelemetry from '../telemetry.js';
+import { CliExitData } from '../util/childProcessUtil.js';
+import { HelmRepo } from './helmChartType.js';
+import * as HelmCommands from './helmCommands.js';
 
 export type HelmRelease = {
     name?: string;

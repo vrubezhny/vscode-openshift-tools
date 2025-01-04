@@ -4,9 +4,9 @@
  *-----------------------------------------------------------------------------------------------*/
 
 import { expect } from 'chai';
-import * as Helm from '../../src/helm/helm';
-import { Oc } from '../../src/oc/ocWrapper';
-import { LoginUtil } from '../../src/util/loginUtil';
+import * as Helm from '../../src/helm/helm.js';
+import { Oc } from '../../src/oc/ocWrapper.js';
+import { LoginUtil } from '../../src/util/loginUtil.js';
 
 suite('helm integration', function () {
     const isOpenShift: boolean = Boolean(parseInt(process.env.IS_OPENSHIFT, 10)) || false;

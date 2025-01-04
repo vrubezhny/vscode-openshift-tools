@@ -7,10 +7,10 @@ import * as fs from 'fs/promises';
 import * as path from 'path';
 import validator from 'validator';
 import { extensions, Uri, WebviewPanel, WebviewView } from 'vscode';
-import * as NameValidator from '../../openshift/nameValidator';
-import { ExtensionID } from '../../util/constants';
-import { gitUrlParse } from '../../util/gitParse';
-import { validateURLProps } from '../common/propertyTypes';
+import * as NameValidator from '../../openshift/nameValidator.js';
+import { ExtensionID } from '../../util/constants.js';
+import { gitUrlParse } from '../../util/gitParse.js';
+import { validateURLProps } from '../common/propertyTypes.js';
 
 export type Message = {
     action: string;

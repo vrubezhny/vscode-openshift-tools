@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 import { ActivityBar, EditorView, SideBarView, VSBrowser } from 'vscode-extension-tester';
-import { VIEWS } from '../common/constants';
-import { collapse } from '../common/overdrives';
-import { AddClusterWebView, DevSandboxWebViewPage, LocalClusterWebViewPage } from '../common/ui/webview/addClusterWebView';
-import { webViewIsOpened, welcomeContentButtonsAreLoaded } from '../common/conditions';
+import { webViewIsOpened, welcomeContentButtonsAreLoaded } from '../common/conditions.js';
+import { VIEWS } from '../common/constants.js';
+import { collapse } from '../common/overdrives.js';
+import { AddClusterWebView, DevSandboxWebViewPage, LocalClusterWebViewPage } from '../common/ui/webview/addClusterWebView.js';
 
 export function testAddCluster() {
     describe('Add Cluster', function () {

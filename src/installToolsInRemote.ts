@@ -8,8 +8,9 @@ import * as fs from 'fs-extra';
 import * as os from 'os';
 import * as path from 'path';
 import * as shell from 'shelljs';
-import { downloadFileAndCreateSha256 } from './downloadUtil/downloadBinaries';
-import * as configData from './tools.json';
+import { downloadFileAndCreateSha256 } from './downloadUtil/downloadBinaries.js';
+
+import * as configData from './tools.json' assert { type: 'json' };
 
 async function installBinary(tool): Promise<void> {
     const openShiftToolsFolder = path.join(os.homedir(), '.local', 'state', 'vs-openshift-tools');

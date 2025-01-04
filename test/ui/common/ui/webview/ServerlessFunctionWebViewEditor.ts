@@ -3,7 +3,7 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 import { By, InputBox, Key, WebElement, WebView } from 'vscode-extension-tester';
-import { WebViewForm } from './WebViewForm';
+import { WebViewForm } from './WebViewForm.js';
 
 export class ServerlessFunctionWebView extends WebViewForm {
 

@@ -3,7 +3,7 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 
-import { K8sResourceCommon, K8sResourceKind } from './createServiceTypes';
+import { K8sResourceCommon, K8sResourceKind } from './createServiceTypes.js';
 
 export interface BuilderImage {
     readonly name: string;

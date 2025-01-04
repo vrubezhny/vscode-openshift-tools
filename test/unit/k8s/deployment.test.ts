@@ -8,12 +8,12 @@ import * as sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import * as vscode from 'vscode';
 import * as k8s from 'vscode-kubernetes-tools-api';
-import { CliChannel } from '../../../src/cli';
-import { DeploymentConfig } from '../../../src/k8s/deploymentConfig';
-import { ChildProcessUtil } from '../../../src/util/childProcessUtil';
-import { Progress } from '../../../src/util/progress';
-import { VsCommandError } from '../../../src/vscommand';
-import { OpenShiftTerminalManager } from '../../../src/webview/openshift-terminal/openShiftTerminal';
+import { CliChannel } from '../../../src/cli.js';
+import { DeploymentConfig } from '../../../src/k8s/deploymentConfig.js';
+import { ChildProcessUtil } from '../../../src/util/childProcessUtil.js';
+import { Progress } from '../../../src/util/progress.js';
+import { VsCommandError } from '../../../src/vscommand.js';
+import { OpenShiftTerminalManager } from '../../../src/webview/openshift-terminal/openShiftTerminal.js';
 
 const {expect} = chai;
 chai.use(sinonChai);

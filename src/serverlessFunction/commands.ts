@@ -6,9 +6,9 @@
 import * as fs from 'fs-extra';
 import { load } from 'js-yaml';
 import * as path from 'path';
-import { CommandOption, CommandText } from '../base/command';
-import { GitModel } from './git/git';
-import { FunctionContent, InvokeFunction } from './types';
+import { CommandOption, CommandText } from '../base/command.js';
+import { GitModel } from './git/git.js';
+import { FunctionContent, InvokeFunction } from './types.js';
 
 export class Utils {
     static async getFuncYamlContent(dir: string): Promise<FunctionContent> {

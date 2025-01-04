@@ -4,7 +4,7 @@
  *-----------------------------------------------------------------------------------------------*/
 
 import { Uri } from 'vscode';
-import { OpenShiftTerminalApi } from '../webview/openshift-terminal/openShiftTerminal';
+import { OpenShiftTerminalApi } from '../webview/openshift-terminal/openShiftTerminal.js';
 
 export interface FunctionView {
     refresh(context?: FunctionObject);

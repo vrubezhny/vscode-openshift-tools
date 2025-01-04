@@ -4,11 +4,11 @@
  *-----------------------------------------------------------------------------------------------*/
 import { Check } from '@mui/icons-material';
 import { Box, Chip, Stack, Tooltip, Typography } from '@mui/material';
+import DOMPurify from 'dompurify';
 import * as React from 'react';
 import validator from 'validator';
-import DOMPurify from 'dompurify';
 import DevfileLogo from '../../../images/context/devfile.png';
-import { DevfileData, DevfileInfo } from '../../devfile-registry/devfileInfo';
+import { DevfileData, DevfileInfo } from '../../devfile-registry/devfileInfo.js';
 
 export type DevfileListItemProps = {
     devfileInfo?: DevfileInfo;

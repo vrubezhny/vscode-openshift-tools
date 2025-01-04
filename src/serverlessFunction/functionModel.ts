@@ -6,12 +6,12 @@
 import * as fs from 'fs-extra';
 import * as path from 'path';
 import { Disposable, Uri, window, workspace } from 'vscode';
-import { CommandText } from '../base/command';
-import { CliChannel } from '../cli';
-import { DeploymentConfig } from '../k8s/deploymentConfig';
-import { Utils } from './commands';
-import { Functions } from './functions';
-import { DeployedFunction, FunctionContent, FunctionObject, FunctionStatus, FunctionView } from './types';
+import { CommandText } from '../base/command.js';
+import { CliChannel } from '../cli.js';
+import { DeploymentConfig } from '../k8s/deploymentConfig.js';
+import { Utils } from './commands.js';
+import { Functions } from './functions.js';
+import { DeployedFunction, FunctionContent, FunctionObject, FunctionStatus, FunctionView } from './types.js';
 
 export class ServerlessFunctionModel implements Disposable {
 

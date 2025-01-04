@@ -2,6 +2,7 @@
  *  Copyright (c) Red Hat, Inc. All rights reserved.
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
+
 import {
     V222Devfile,
     V222DevfileCommands,
@@ -11,10 +12,11 @@ import {
     V222DevfileComponentsItemsContainerVolumeMounts,
     V222DevfileMetadata,
     V222DevfileProjects
-} from '@devfile/api';
-import { Data, Endpoint, Metadata } from '../odo/componentTypeDescription';
-import { ComponentV1, DevfileCommandV1, DevfileV1, DevfileVolumeV1, EndpointV1, EnvV1, MetadataV1, ProjectV1 } from './devfileV1Type';
+} from 'ost-commonjs-exports';
+import { Data, Endpoint, Metadata } from '../odo/componentTypeDescription.js';
+import { ComponentV1, DevfileCommandV1, DevfileV1, DevfileVolumeV1, EndpointV1, EnvV1, MetadataV1, ProjectV1 } from './devfileV1Type.js';
 
+/* eslint-disable @typescript-eslint/no-redundant-type-constituents */
 export type DevfileMetadataLike = V222DevfileMetadata & object;
 
 export type DevfileMetadata = DevfileMetadataLike & Required<Pick<DevfileMetadataLike, 'name'>>;

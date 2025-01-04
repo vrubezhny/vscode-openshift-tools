@@ -3,7 +3,7 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 import { By, Key, VSBrowser, WebElement, WebviewView } from 'vscode-extension-tester';
-import { WebviewViewForm } from './webviewViewForm';
+import { WebviewViewForm } from './webviewViewForm.js';
 
 export class OpenshiftTerminalWebviewView extends WebviewViewForm {
     public constructor() {

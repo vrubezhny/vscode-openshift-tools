@@ -10,8 +10,8 @@ import 'survey-core/defaultV2.css';
 import { Survey } from 'survey-react-ui';
 import OpenShiftExtensionIcon from '../../../../images/openshift_icon.png';
 import MicrosoftIcon from '../../../../images/welcome/microsoft.svg';
-import { DefaultProps } from '../../common/propertyTypes';
-import { json } from '../json';
+import { DefaultProps } from '../../common/propertyTypes.js';
+import { json } from '../json.js';
 import './feedback.css';
 
 export const FeedbackComponent: React.FC<DefaultProps> = () => {

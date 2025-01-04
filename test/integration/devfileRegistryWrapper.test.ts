@@ -5,8 +5,8 @@
 
 import { expect } from 'chai';
 import { suite, suiteSetup } from 'mocha';
-import { DevfileRegistry } from '../../src/devfile-registry/devfileRegistryWrapper';
-import { OdoPreference } from '../../src/odo/odoPreference';
+import { DevfileRegistry } from '../../src/devfile-registry/devfileRegistryWrapper.js';
+import { OdoPreference } from '../../src/odo/odoPreference.js';
 
 suite('Devfile Registry Wrapper tests', function () {
     const TEST_REGISTRY_NAME = 'TestRegistry';

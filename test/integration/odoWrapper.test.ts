@@ -11,11 +11,11 @@ import * as path from 'path';
 import * as tmp from 'tmp';
 import { promisify } from 'util';
 import { Uri, workspace } from 'vscode';
-import { Oc } from '../../src/oc/ocWrapper';
-import { OdoPreference } from '../../src/odo/odoPreference';
-import { Odo } from '../../src/odo/odoWrapper';
-import { LoginUtil } from '../../src/util/loginUtil';
-import { Platform } from '../../src/util/platform';
+import { Oc } from '../../src/oc/ocWrapper.js';
+import { OdoPreference } from '../../src/odo/odoPreference.js';
+import { Odo } from '../../src/odo/odoWrapper.js';
+import { LoginUtil } from '../../src/util/loginUtil.js';
+import { Platform } from '../../src/util/platform.js';
 
 suite('./odo/odoWrapper.ts', function () {
     const isOpenShift: boolean = Boolean(parseInt(process.env.IS_OPENSHIFT, 10)) || false;

@@ -2,12 +2,12 @@
  *  Copyright (c) Red Hat, Inc. All rights reserved.
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
+import { Launch } from '@mui/icons-material';
 import { Box, Button, Chip, Link, Stack, SvgIcon, Tooltip, Typography } from '@mui/material';
 import * as React from 'react';
 import HelmIcon from '../../../../images/helm/helm.svg';
-import { Chart, ChartResponse } from '../../../helm/helmChartType';
-import { VSCodeMessage } from '../vsCodeMessage';
-import { Launch } from '@mui/icons-material';
+import { Chart, ChartResponse } from '../../../helm/helmChartType.js';
+import { VSCodeMessage } from '../vsCodeMessage.js';
 
 export type HelmListItemProps = {
     helmChart: ChartResponse;

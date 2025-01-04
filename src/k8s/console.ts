@@ -4,11 +4,11 @@
  *-----------------------------------------------------------------------------------------------*/
 
 import { commands, Disposable, Uri, window } from 'vscode';
-import { CliChannel } from '../cli';
-import { Oc } from '../oc/ocWrapper';
-import { ClusterType } from '../oc/types';
-import { KubeConfigUtils } from '../util/kubeUtils';
-import { vsCommand } from '../vscommand';
+import { CliChannel } from '../cli.js';
+import { Oc } from '../oc/ocWrapper.js';
+import { ClusterType } from '../oc/types.js';
+import { KubeConfigUtils } from '../util/kubeUtils.js';
+import { vsCommand } from '../vscommand.js';
 
 export class Console implements Disposable {
     private static instance: Console;

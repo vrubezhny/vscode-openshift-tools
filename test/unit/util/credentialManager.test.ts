@@ -7,7 +7,7 @@ import * as chai from 'chai';
 import * as sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 
-import { TokenStore } from '../../../src/util/credentialManager';
+import { TokenStore } from '../../../src/util/credentialManager.js';
 
 const {expect} = chai;
 chai.use(sinonChai);

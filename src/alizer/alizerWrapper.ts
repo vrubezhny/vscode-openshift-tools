@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 
-import { CommandText } from '../base/command';
-import { CliChannel } from '../cli';
 import { Uri } from 'vscode';
-import { CliExitData } from '../util/childProcessUtil';
-import { AlizerAnalyzeResponse, AlizerDevfileResponse } from './types';
+import { CommandText } from '../base/command.js';
+import { CliChannel } from '../cli.js';
+import { CliExitData } from '../util/childProcessUtil.js';
+import { AlizerAnalyzeResponse, AlizerDevfileResponse } from './types.js';
 
 /**
  * A wrapper around the `alizer` CLI tool.

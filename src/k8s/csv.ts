@@ -5,9 +5,9 @@
 
 import { TreeItem } from 'vscode';
 import { ClusterExplorerV1 } from 'vscode-kubernetes-tools-api';
-import { Oc } from '../oc/ocWrapper';
-import OpenShiftItem from '../openshift/openshiftItem';
-import { CRDDescription, ClusterServiceVersionKind } from './olm/types';
+import { Oc } from '../oc/ocWrapper.js';
+import OpenShiftItem from '../openshift/openshiftItem.js';
+import { CRDDescription, ClusterServiceVersionKind } from './olm/types.js';
 
 class CsvNode implements ClusterExplorerV1.Node, ClusterExplorerV1.ClusterExplorerExtensionNode {
 

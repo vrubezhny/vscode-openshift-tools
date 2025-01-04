@@ -17,10 +17,10 @@ import {
     VSBrowser,
     Workbench,
 } from 'vscode-extension-tester';
-import { itemDoesNotExist, itemExists, notificationDoesNotExist } from '../common/conditions';
-import { MENUS, VIEWS } from '../common/constants';
-import { collapse } from '../common/overdrives';
-import { OpenshiftTerminalWebviewView } from '../common/ui/webviewView/openshiftTerminalWebviewView';
+import { itemDoesNotExist, itemExists, notificationDoesNotExist } from '../common/conditions.js';
+import { MENUS, VIEWS } from '../common/constants.js';
+import { collapse } from '../common/overdrives.js';
+import { OpenshiftTerminalWebviewView } from '../common/ui/webviewView/openshiftTerminalWebviewView.js';
 
 export function testComponentContextMenu() {
     describe('Component Context Menu', function () {

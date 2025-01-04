@@ -5,16 +5,16 @@
 
 import validator from 'validator';
 import { commands, Disposable, window } from 'vscode';
-import * as Helm from '../../src/helm/helm';
-import { ascRepoName } from '../../src/helm/helm';
-import { OpenShiftExplorer } from '../explorer';
-import sendTelemetry from '../telemetry';
-import { inputValue } from '../util/inputValue';
-import { Progress } from '../util/progress';
-import { vsCommand } from '../vscommand';
-import HelmChartLoader from '../webview/helm-chart/helmChartLoader';
-import ManageRepositoryViewLoader from '../webview/helm-manage-repository/manageRepositoryLoader';
-import { HelmRepo } from './helmChartType';
+import * as Helm from '../../src/helm/helm.js';
+import { ascRepoName } from '../../src/helm/helm.js';
+import { OpenShiftExplorer } from '../explorer.js';
+import sendTelemetry from '../telemetry.js';
+import { inputValue } from '../util/inputValue.js';
+import { Progress } from '../util/progress.js';
+import { vsCommand } from '../vscommand.js';
+import HelmChartLoader from '../webview/helm-chart/helmChartLoader.js';
+import ManageRepositoryViewLoader from '../webview/helm-manage-repository/manageRepositoryLoader.js';
+import { HelmRepo } from './helmChartType.js';
 
 export class ManageRepository implements Disposable {
     private static instance: ManageRepository;

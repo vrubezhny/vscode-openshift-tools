@@ -5,10 +5,10 @@
 import { ChildProcess } from 'child_process';
 import * as path from 'path';
 import { commands, Disposable, extensions, Uri, ViewColumn, WebviewPanel, window } from 'vscode';
-import { ascRepoName, list } from '../../helm/helm';
-import { ExtensionID } from '../../util/constants';
-import { vsCommand } from '../../vscommand';
-import { loadWebviewHtml, Message, validateName, validateURL } from '../common-ext/utils';
+import { ascRepoName, list } from '../../helm/helm.js';
+import { ExtensionID } from '../../util/constants.js';
+import { vsCommand } from '../../vscommand.js';
+import { loadWebviewHtml, Message, validateName, validateURL } from '../common-ext/utils.js';
 
 export default class ManageRepositoryViewLoader implements Disposable {
     private static instance: ManageRepositoryViewLoader;

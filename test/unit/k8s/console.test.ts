@@ -7,9 +7,9 @@ import * as chai from 'chai';
 import * as sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import * as vscode from 'vscode';
-import { CliChannel } from '../../../src/cli';
-import { Console } from '../../../src/k8s/console';
-import { KubeConfigUtils } from '../../../src/util/kubeUtils';
+import { CliChannel } from '../../../src/cli.js';
+import { Console } from '../../../src/k8s/console.js';
+import { KubeConfigUtils } from '../../../src/util/kubeUtils.js';
 
 const {expect} = chai;
 chai.use(sinonChai);

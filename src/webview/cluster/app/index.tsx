@@ -6,8 +6,8 @@
 import { createTheme, ThemeProvider } from '@mui/material';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import Header from './cluster';
-import { WebviewErrorBoundary } from '../../common/webviewErrorBoundary';
+import { WebviewErrorBoundary } from '../../common/webviewErrorBoundary.js';
+import Header from './cluster.js';
 
 const theme = createTheme();
 ReactDOM.render(

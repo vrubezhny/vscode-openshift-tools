@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 
-import { KubernetesObject } from '@kubernetes/client-node/dist/types';
+import { KubernetesObject } from '@kubernetes/client-node';
 import * as fs from 'fs/promises';
 import * as tmp from 'tmp';
 import validator from 'validator';
-import { CommandOption, CommandText } from '../base/command';
-import { CliChannel, ExecutionContext } from '../cli';
-import { CliExitData } from '../util/childProcessUtil';
-import { isOpenShiftCluster, KubeConfigUtils } from '../util/kubeUtils';
-import { Project } from './project';
-import { ClusterType, KubernetesConsole } from './types';
+import { CommandOption, CommandText } from '../base/command.js';
+import { CliChannel, ExecutionContext } from '../cli.js';
+import { CliExitData } from '../util/childProcessUtil.js';
+import { isOpenShiftCluster, KubeConfigUtils } from '../util/kubeUtils.js';
+import { Project } from './project.js';
+import { ClusterType, KubernetesConsole } from './types.js';
 
 /**
  * A wrapper around the `oc` CLI tool.

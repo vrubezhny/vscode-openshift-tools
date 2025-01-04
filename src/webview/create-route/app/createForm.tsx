@@ -22,11 +22,11 @@ import {
 } from '@mui/material';
 import * as React from 'react';
 import 'react-dom';
-import type { K8sResourceKind, Port } from '../../common/createServiceTypes';
-import { ErrorPage } from '../../common/errorPage';
-import { LoadScreen } from '../../common/loading';
-import type { RouteInputBoxText } from '../../common/route';
-import { createVSCodeTheme } from '../../common/vscode-theme';
+import type { K8sResourceKind, Port } from '../../common/createServiceTypes.js';
+import { ErrorPage } from '../../common/errorPage.js';
+import { LoadScreen } from '../../common/loading.js';
+import type { RouteInputBoxText } from '../../common/route.js';
+import { createVSCodeTheme } from '../../common/vscode-theme.js';
 
 /**
  * Component to select which type of service (which CRD) should be created.

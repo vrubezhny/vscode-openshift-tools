@@ -4,7 +4,11 @@
  *-----------------------------------------------------------------------------------------------*/
 
 import * as etest from '@vscode/test-electron';
-import * as path from 'path';
+import { dirname, resolve } from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 /**
  * Run mocha tests from project's tests folder.
@@ -13,11 +17,11 @@ import * as path from 'path';
  */
 async function main(): Promise<void> {
     const [, , tests, extension = ''] = process.argv;
-    const extensionRootPath = path.resolve(__dirname, '../../');
-    const extensionDevelopmentPath = path.resolve(extensionRootPath, extension);
-    const extensionTestsPath = path.resolve(extensionRootPath, 'out', 'test', tests);
-    const integrationWorkspacePath = path.resolve(extensionRootPath, 'test', 'fixtures', 'components', 'components.code-workspace');
-    const unitTestWorkspacePath = path.resolve(extensionRootPath, 'test', 'fixtures', 'components', 'empty.code-workspace');
+    const extensionRootPath = resolve(__dirname, '../../');
+    const extensionDevelopmentPath = resolve(extensionRootPath, extension);
+    const extensionTestsPath = resolve(extensionRootPath, 'out', 'test', tests);
+    const integrationWorkspacePath = resolve(extensionRootPath, 'test', 'fixtures', 'components', 'components.code-workspace');
+    const unitTestWorkspacePath = resolve(extensionRootPath, 'test', 'fixtures', 'components', 'empty.code-workspace');
     try {
         await etest.runTests({
             extensionDevelopmentPath,

@@ -5,10 +5,10 @@
 import { ChildProcess } from 'child_process';
 import * as path from 'path';
 import * as vscode from 'vscode';
-import { ManageRepository } from '../../serverlessFunction/manageRepository';
-import { ExtensionID } from '../../util/constants';
-import { Progress } from '../../util/progress';
-import { loadWebviewHtml, Message, validateGitURL, validateName } from '../common-ext/utils';
+import { ManageRepository } from '../../serverlessFunction/manageRepository.js';
+import { ExtensionID } from '../../util/constants.js';
+import { Progress } from '../../util/progress.js';
+import { loadWebviewHtml, Message, validateGitURL, validateName } from '../common-ext/utils.js';
 
 export default class ManageRepositoryViewLoader {
 

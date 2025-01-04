@@ -3,24 +3,24 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 
-import { V222Devfile } from '@devfile/api';
 import { fail } from 'assert';
 import { assert, expect } from 'chai';
 import { ChildProcess } from 'child_process';
 import * as fs from 'fs/promises';
 import * as JSYAML from 'js-yaml';
+import { V222Devfile } from 'ost-commonjs-exports';
 import * as path from 'path';
 import * as tmp from 'tmp';
 import { promisify } from 'util';
 import { EventEmitter, Terminal, window, workspace } from 'vscode';
-import { CommandText } from '../../src/base/command';
-import { CliChannel } from '../../src/cli';
-import { Oc } from '../../src/oc/ocWrapper';
-import { Command } from '../../src/odo/command';
-import { ComponentDescription } from '../../src/odo/componentTypeDescription';
-import { OdoPreference } from '../../src/odo/odoPreference';
-import { Odo } from '../../src/odo/odoWrapper';
-import { LoginUtil } from '../../src/util/loginUtil';
+import { CommandText } from '../../src/base/command.js';
+import { CliChannel } from '../../src/cli.js';
+import { Oc } from '../../src/oc/ocWrapper.js';
+import { Command } from '../../src/odo/command.js';
+import { ComponentDescription } from '../../src/odo/componentTypeDescription.js';
+import { OdoPreference } from '../../src/odo/odoPreference.js';
+import { Odo } from '../../src/odo/odoWrapper.js';
+import { LoginUtil } from '../../src/util/loginUtil.js';
 
 const ODO = Odo.Instance;
 

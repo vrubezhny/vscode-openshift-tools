@@ -5,9 +5,9 @@
 import { V1Container, V1Deployment, V1Pod, V1Service } from '@kubernetes/client-node';
 import * as portFinder from 'portfinder';
 import { QuickPickOptions, window } from 'vscode';
-import { CommandText } from './base/command';
-import { Oc } from './oc/ocWrapper';
-import { OpenShiftTerminalManager } from './webview/openshift-terminal/openShiftTerminal';
+import { CommandText } from './base/command.js';
+import { Oc } from './oc/ocWrapper.js';
+import { OpenShiftTerminalManager } from './webview/openshift-terminal/openShiftTerminal.js';
 
 export interface PortMapping {
     readonly localPort?: number;

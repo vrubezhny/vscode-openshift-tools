@@ -13,10 +13,10 @@ import {
     Workbench,
     before,
 } from 'vscode-extension-tester';
-import { itemExists, notificationExists } from '../common/conditions';
-import { MENUS, NOTIFICATIONS, VIEWS } from '../common/constants';
-import { reloadWindow } from '../common/overdrives';
-import { CreateServiceWebView, ServiceSetupPage } from '../common/ui/webview/createServiceWebView';
+import { itemExists, notificationExists } from '../common/conditions.js';
+import { MENUS, NOTIFICATIONS, VIEWS } from '../common/constants.js';
+import { reloadWindow } from '../common/overdrives.js';
+import { CreateServiceWebView, ServiceSetupPage } from '../common/ui/webview/createServiceWebView.js';
 
 export function operatorBackedServiceTest() {
     describe('Operator-Backed Service', function () {

@@ -8,11 +8,11 @@ import { Button, Card, CardActions, CardContent, List, ListItem, ListItemText, T
 import { makeStyles } from '@mui/styles';
 import clsx from 'clsx';
 import * as React from 'react';
-import clusterStyle, { ClusterTheme } from './cluster.style';
-import AddClusterView from './clusterView';
-import OpenShiftLogo from './images/logo.png';
-import AddSandboxView from './sandboxView';
 import OpenShiftLocal from '../../../../images/openshift-local.png';
+import clusterStyle, { ClusterTheme } from './cluster.style.js';
+import AddClusterView from './clusterView.js';
+import OpenShiftLogo from './images/logo.png';
+import AddSandboxView from './sandboxView.js';
 
 const useStyles = makeStyles(clusterStyle);
 

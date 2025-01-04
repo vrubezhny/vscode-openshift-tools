@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 
-import * as fs from 'fs-extra';
+import fs from 'fs-extra';
 import type { Got } from 'got/dist/source';
 import { fromEvent } from 'rxjs';
 import { throttleTime } from 'rxjs/operators';
 import { promisify } from 'util';
 
 // need to use `require`, since we replace these imports in the unit tests
-import * as got from 'got';
+import got from 'got';
 import * as stream from 'stream';
 
 export class DownloadUtil {

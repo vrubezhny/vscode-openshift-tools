@@ -9,9 +9,9 @@ import * as path from 'path';
 import * as semver from 'semver';
 import { which } from 'shelljs';
 import * as vscode from 'vscode';
-import * as configData from './tools.json';
-import { ChildProcessUtil } from './util/childProcessUtil';
-import { Platform } from './util/platform';
+import * as configData from './tools.json' assert { type: 'json' };
+import { ChildProcessUtil } from './util/childProcessUtil.js';
+import { Platform } from './util/platform.js';
 
 export class ToolsConfig {
 

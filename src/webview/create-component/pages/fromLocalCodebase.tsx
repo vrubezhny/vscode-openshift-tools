@@ -15,18 +15,18 @@ import {
     Typography
 } from '@mui/material';
 import * as React from 'react';
-import { DevfileData } from '../../../devfile-registry/devfileInfo';
-import { ComponentNameInput } from '../../common/componentNameInput';
+import { DevfileData } from '../../../devfile-registry/devfileInfo.js';
+import { ComponentNameInput } from '../../common/componentNameInput.js';
 import {
     CreateComponentButton,
     ErrorAlert
-} from '../../common/createComponentButton';
-import { DevfileListItem } from '../../common/devfileListItem';
-import { RecommendationInfo } from '../../common/devfileRecommendationInfo';
-import { DevfileSearch } from '../../common/devfileSearch';
-import { NoSuitableWarning } from '../../common/noSuitableDevfile';
-import { PortNumberInput } from '../../common/portNumberInput';
-import { buildSanitizedComponentName } from '../../common/sanitize';
+} from '../../common/createComponentButton.js';
+import { DevfileListItem } from '../../common/devfileListItem.js';
+import { RecommendationInfo } from '../../common/devfileRecommendationInfo.js';
+import { DevfileSearch } from '../../common/devfileSearch.js';
+import { NoSuitableWarning } from '../../common/noSuitableDevfile.js';
+import { PortNumberInput } from '../../common/portNumberInput.js';
+import { buildSanitizedComponentName } from '../../common/sanitize.js';
 
 type Message = {
     action: string;

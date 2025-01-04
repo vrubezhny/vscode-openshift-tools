@@ -10,16 +10,16 @@ import {
     QuickInputButtons, QuickPickItem, ThemeIcon, TreeDataProvider,
     TreeItem, TreeItemCollapsibleState, TreeView, Uri, window
 } from 'vscode';
-import { DevfileRegistry } from './devfile-registry/devfileRegistryWrapper';
+import { DevfileRegistry } from './devfile-registry/devfileRegistryWrapper.js';
 import {
     Registry
-} from './odo/componentType';
-import { StarterProject } from './odo/componentTypeDescription';
-import { OdoPreference } from './odo/odoPreference';
-import { Odo } from './odo/odoWrapper';
-import { inputValue, quickBtn } from './util/inputValue';
-import { Progress } from './util/progress';
-import { vsCommand, VsCommandError } from './vscommand';
+} from './odo/componentType.js';
+import { StarterProject } from './odo/componentTypeDescription.js';
+import { OdoPreference } from './odo/odoPreference.js';
+import { Odo } from './odo/odoWrapper.js';
+import { inputValue, quickBtn } from './util/inputValue.js';
+import { Progress } from './util/progress.js';
+import { vsCommand, VsCommandError } from './vscommand.js';
 
 type ComponentType = Registry;
 

@@ -12,18 +12,18 @@ import * as tmp from 'tmp';
 import { promisify } from 'util';
 import * as vscode from 'vscode';
 import { extensions, Uri, ViewColumn, WebviewPanel, window } from 'vscode';
-import { Alizer } from '../../alizer/alizerWrapper';
-import { AlizerDevfileResponse, Version } from '../../alizer/types';
-import { DevfileInfo, DevfileInfoExt, DevfileVersionInfo } from '../../devfile-registry/devfileInfo';
-import { DevfileRegistry } from '../../devfile-registry/devfileRegistryWrapper';
-import { Endpoint } from '../../odo/componentTypeDescription';
-import { Odo } from '../../odo/odoWrapper';
-import { ComponentTypesView } from '../../registriesView';
-import sendTelemetry from '../../telemetry';
-import { ExtensionID } from '../../util/constants';
-import { DevfileConverter } from '../../util/devfileConverter';
-import { DevfileV1 } from '../../util/devfileV1Type';
-import { getInitialWorkspaceFolder, selectWorkspaceFolder } from '../../util/workspace';
+import { Alizer } from '../../alizer/alizerWrapper.js';
+import { AlizerDevfileResponse, Version } from '../../alizer/types.js';
+import { DevfileInfo, DevfileInfoExt, DevfileVersionInfo } from '../../devfile-registry/devfileInfo.js';
+import { DevfileRegistry } from '../../devfile-registry/devfileRegistryWrapper.js';
+import { Endpoint } from '../../odo/componentTypeDescription.js';
+import { Odo } from '../../odo/odoWrapper.js';
+import { ComponentTypesView } from '../../registriesView.js';
+import sendTelemetry from '../../telemetry.js';
+import { ExtensionID } from '../../util/constants.js';
+import { DevfileConverter } from '../../util/devfileConverter.js';
+import { DevfileV1 } from '../../util/devfileV1Type.js';
+import { getInitialWorkspaceFolder, selectWorkspaceFolder } from '../../util/workspace.js';
 import {
     isValidProjectFolder,
     sendDevfileForVersion,
@@ -33,9 +33,9 @@ import {
     sendUpdatedTags,
     validateName,
     validatePortNumber
-} from '../common-ext/createComponentHelpers';
-import { loadWebviewHtml, validateGitURL } from '../common-ext/utils';
-import { Devfile, TemplateProjectIdentifier } from '../common/devfile';
+} from '../common-ext/createComponentHelpers.js';
+import { loadWebviewHtml, validateGitURL } from '../common-ext/utils.js';
+import { Devfile, TemplateProjectIdentifier } from '../common/devfile.js';
 
 interface CloneProcess {
     status: boolean;

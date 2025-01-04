@@ -5,12 +5,12 @@
 
 import * as vsc from 'vscode';
 import { ThemeIcon } from 'vscode';
-import { BaseTreeDataProvider } from './base/baseTreeDataProvider';
-import { Command, CommandProvider, ComponentDescription } from './odo/componentTypeDescription';
-import { ComponentWorkspaceFolder, OdoWorkspace } from './odo/workspace';
-import { Component } from './openshift/component';
-import { imagePath } from './util/utils';
-import { vsCommand } from './vscommand';
+import { BaseTreeDataProvider } from './base/baseTreeDataProvider.js';
+import { Command, CommandProvider, ComponentDescription } from './odo/componentTypeDescription.js';
+import { ComponentWorkspaceFolder, OdoWorkspace } from './odo/workspace.js';
+import { Component } from './openshift/component.js';
+import { imagePath } from './util/utils.js';
+import { vsCommand } from './vscommand.js';
 
 export class ComponentInfo implements ComponentWorkspaceFolder {
     contextPath: string;

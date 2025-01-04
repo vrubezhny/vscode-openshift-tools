@@ -2,6 +2,7 @@
  *  Copyright (c) Red Hat, Inc. All rights reserved.
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
+import { expect } from 'chai';
 import * as fs from 'fs-extra';
 import * as pth from 'path';
 import {
@@ -12,10 +13,9 @@ import {
     ViewSection,
     Workbench,
 } from 'vscode-extension-tester';
-import { VIEWS } from '../common/constants';
-import { collapse } from '../common/overdrives';
-import { ServerlessFunctionWebView } from '../common/ui/webview/ServerlessFunctionWebViewEditor';
-import { expect } from 'chai';
+import { VIEWS } from '../common/constants.js';
+import { collapse } from '../common/overdrives.js';
+import { ServerlessFunctionWebView } from '../common/ui/webview/ServerlessFunctionWebViewEditor.js';
 
 export function testCreateServerlessFunction(path: string) {
     describe('Serverless Function', function () {

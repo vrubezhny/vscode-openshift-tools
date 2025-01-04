@@ -17,11 +17,11 @@ import {
     styled
 } from '@mui/material';
 import React from 'react';
-import OpenShiftIcon from '../../../../images/openshift_view.svg';
 import KnativeIcon from '../../../../images/knative.svg';
-import { createVSCodeTheme } from '../../common/vscode-theme';
-import { TerminalInstance } from './terminalInstance';
-import { VSCodeMessage } from './vscodeMessage';
+import OpenShiftIcon from '../../../../images/openshift_view.svg';
+import { createVSCodeTheme } from '../../common/vscode-theme.js';
+import { TerminalInstance } from './terminalInstance.js';
+import { VSCodeMessage } from './vscodeMessage.js';
 
 /**
  * Represents the label for the tab that's used in the list of tabs.

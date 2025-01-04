@@ -2,9 +2,9 @@
  *  Copyright (c) Red Hat, Inc. All rights reserved.
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
-import { ViewSection, By, waitForAttributeValue, BottomBarPanel, VSBrowser, ActivityBar } from 'vscode-extension-tester';
-import { activateCommand } from './command-activator';
-import { VIEWS } from './constants';
+import { ActivityBar, BottomBarPanel, By, ViewSection, VSBrowser, waitForAttributeValue } from 'vscode-extension-tester';
+import { activateCommand } from './command-activator.js';
+import { VIEWS } from './constants.js';
 
 export async function collapse(section: ViewSection) {
     try {

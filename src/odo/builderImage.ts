@@ -5,10 +5,10 @@
 
 import * as _ from 'lodash';
 import * as semver from 'semver';
-import { CommandText } from '../base/command';
-import { K8sResourceCommon, K8sResourceKind, Service } from '../k8s/olm/types';
-import { CliExitData } from '../util/childProcessUtil';
-import { Odo } from './odoWrapper';
+import { CommandText } from '../base/command.js';
+import { K8sResourceCommon, K8sResourceKind, Service } from '../k8s/olm/types.js';
+import { CliExitData } from '../util/childProcessUtil.js';
+import { Odo } from './odoWrapper.js';
 
 export interface BuilderImage {
     readonly name: string;

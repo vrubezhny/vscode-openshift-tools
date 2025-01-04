@@ -14,8 +14,8 @@ import * as shelljs from 'shelljs';
 import * as sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import * as vscode from 'vscode';
-import { ChildProcessUtil, CliExitData } from '../../src/util/childProcessUtil';
-import { Platform } from '../../src/util/platform';
+import { ChildProcessUtil, CliExitData } from '../../src/util/childProcessUtil.js';
+import { Platform } from '../../src/util/platform.js';
 
 chai.use(sinonChai);
 

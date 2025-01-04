@@ -8,8 +8,8 @@
 
 import * as stackTraceParser from 'stacktrace-parser';
 import { commands, Disposable, window } from 'vscode';
-import sendTelemetry, { CommonCommandProps, TelemetryProps } from './telemetry';
-import { ExtensionID } from './util/constants';
+import sendTelemetry, { CommonCommandProps, TelemetryProps } from './telemetry.js';
+import { ExtensionID } from './util/constants.js';
 
 type VsCommandFunction = (...args: any[]) => Promise<string | undefined> | string | undefined;
 

@@ -3,23 +3,23 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 
+import { expect } from 'chai';
+import * as fs from 'fs';
+import * as yml from 'js-yaml';
+import * as pth from 'path';
 import {
     ActivityBar,
     EditorView,
     SideBarView,
     TreeItem,
     ViewSection,
-    before,
     after,
+    before,
 } from 'vscode-extension-tester';
-import { VIEWS } from '../common/constants';
-import { expect } from 'chai';
-import { OpenshiftTerminalWebviewView } from '../common/ui/webviewView/openshiftTerminalWebviewView';
-import * as yml from 'js-yaml';
-import * as fs from 'fs';
-import * as pth from 'path';
-import { reloadWindow } from '../common/overdrives';
-import { itemExists } from '../common/conditions';
+import { itemExists } from '../common/conditions.js';
+import { VIEWS } from '../common/constants.js';
+import { reloadWindow } from '../common/overdrives.js';
+import { OpenshiftTerminalWebviewView } from '../common/ui/webviewView/openshiftTerminalWebviewView.js';
 
 export function testComponentCommands(path: string) {
     describe('Component Commands', function () {

@@ -5,8 +5,9 @@
 
 import { expect } from 'chai';
 import { ActivityBar, ExtensionsViewItem, ExtensionsViewSection, SideBarView } from 'vscode-extension-tester';
-import * as pjson from '../../../package.json';
-import { VIEWS } from '../common/constants';
+import { VIEWS } from '../common/constants.js';
+
+import * as pjson from '../../../package.json' assert { type: 'json' };
 
 export function checkExtension() {
     describe('Extensions view check', () => {

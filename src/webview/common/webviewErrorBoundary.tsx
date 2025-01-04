@@ -4,7 +4,7 @@
  *-----------------------------------------------------------------------------------------------*/
 import * as React from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
-import { ErrorPage } from './errorPage';
+import { ErrorPage } from './errorPage.js';
 
 /**
  * Initialize react-error-boundary with defaults for webviews.

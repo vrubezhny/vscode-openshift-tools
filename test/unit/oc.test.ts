@@ -7,12 +7,12 @@ import * as chai from 'chai';
 import * as sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import { window } from 'vscode';
-import { Oc } from '../../src/oc/ocWrapper';
-import { Project } from '../../src/oc/project';
-import { ToolsConfig } from '../../src/tools';
-import { ChildProcessUtil } from '../../src/util/childProcessUtil';
-import { getNamespaceKind } from '../../src/util/kubeUtils';
-import { YamlFileCommands } from '../../src/yamlFileCommands';
+import { Oc } from '../../src/oc/ocWrapper.js';
+import { Project } from '../../src/oc/project.js';
+import { ToolsConfig } from '../../src/tools.js';
+import { ChildProcessUtil } from '../../src/util/childProcessUtil.js';
+import { getNamespaceKind } from '../../src/util/kubeUtils.js';
+import { YamlFileCommands } from '../../src/yamlFileCommands.js';
 
 const {expect} = chai;
 chai.use(sinonChai);

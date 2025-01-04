@@ -5,8 +5,8 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { DevfileRegistry } from './devfileRegistry';
-import { WebviewErrorBoundary } from '../../common/webviewErrorBoundary';
+import { WebviewErrorBoundary } from '../../common/webviewErrorBoundary.js';
+import { DevfileRegistry } from './devfileRegistry.js';
 
 ReactDOM.render(
     <WebviewErrorBoundary webviewName='devfileRegistry'>

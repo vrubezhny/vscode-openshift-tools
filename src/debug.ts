@@ -16,7 +16,7 @@ import {
     TreeView,
     window,
 } from 'vscode';
-import { ComponentsTreeDataProvider } from './componentsView';
+import { ComponentsTreeDataProvider } from './componentsView.js';
 
 class DebugSessionEntry {
     label: string;

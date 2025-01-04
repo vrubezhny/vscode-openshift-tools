@@ -4,13 +4,13 @@
  *-----------------------------------------------------------------------------------------------*/
 
 import { commands, QuickPickItem, window } from 'vscode';
-import { ExecutionContext } from '../cli';
-import { Oc } from '../oc/ocWrapper';
-import { Project } from '../oc/project';
-import { ServerlessFunctionView } from '../serverlessFunction/view';
-import { inputValue } from '../util/inputValue';
-import { getNamespaceKind } from '../util/kubeUtils';
-import * as NameValidator from './nameValidator';
+import { ExecutionContext } from '../cli.js';
+import { Oc } from '../oc/ocWrapper.js';
+import { Project } from '../oc/project.js';
+import { ServerlessFunctionView } from '../serverlessFunction/view.js';
+import { inputValue } from '../util/inputValue.js';
+import { getNamespaceKind } from '../util/kubeUtils.js';
+import * as NameValidator from './nameValidator.js';
 
 export class QuickPickCommand implements QuickPickItem {
     constructor (public label: string,

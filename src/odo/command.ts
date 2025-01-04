@@ -3,7 +3,7 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 
-import { CommandOption, CommandText, verbose } from '../base/command';
+import { CommandOption, CommandText, verbose } from '../base/command.js';
 
 export class Command {
 

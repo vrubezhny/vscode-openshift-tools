@@ -3,8 +3,8 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 import { Disposable } from 'vscode';
-import { vsCommand } from './vscommand';
-import FeedbackLoader from './webview/feedback/feedbackLoader';
+import { vsCommand } from './vscommand.js';
+import FeedbackLoader from './webview/feedback/feedbackLoader.js';
 
 export class Feedback implements Disposable {
     private static instance: Feedback;

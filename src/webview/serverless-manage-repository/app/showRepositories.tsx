@@ -6,9 +6,9 @@
 import { Add, Cancel, Delete, Done, Edit } from '@mui/icons-material';
 import { Box, Button, CircularProgress, Container, Dialog, DialogActions, DialogContent, IconButton, Stack, styled, Table, TableBody, TableCell, tableCellClasses, TableContainer, TableHead, TablePagination, TableRow, TextField, Tooltip, Typography } from '@mui/material';
 import * as React from 'react';
-import { DefaultProps } from '../../common/propertyTypes';
-import { AddRepository } from './addRepository';
-import { VSCodeMessage } from './vsCodeMessage';
+import { DefaultProps } from '../../common/propertyTypes.js';
+import { AddRepository } from './addRepository.js';
+import { VSCodeMessage } from './vsCodeMessage.js';
 
 export class ShowRepositories extends React.Component<DefaultProps, {
     repositories: string[],

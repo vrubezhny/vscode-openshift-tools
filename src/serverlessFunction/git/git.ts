@@ -4,7 +4,7 @@
  *-----------------------------------------------------------------------------------------------*/
 
 import * as vscode from 'vscode';
-import type { API, Branch, Ref, Remote } from '../../@types/git';
+import type { API, Branch, Ref, Remote } from '../../@types/git.js';
 
 const GIT_EXTENSION_ID = 'vscode.git';
 

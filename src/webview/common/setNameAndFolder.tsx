@@ -15,12 +15,12 @@ import {
 } from '@mui/material';
 import * as React from 'react';
 import 'react-dom';
-import { DevfileData, DevfileInfo } from '../../devfile-registry/devfileInfo';
-import { ComponentNameInput } from './componentNameInput';
-import { CreateComponentButton, ErrorAlert } from './createComponentButton';
-import { DevfileListItem } from './devfileListItem';
-import { PortNumberInput } from './portNumberInput';
-import { ValidationStatus } from './validationResult';
+import { DevfileData, DevfileInfo } from '../../devfile-registry/devfileInfo.js';
+import { ComponentNameInput } from './componentNameInput.js';
+import { CreateComponentButton, ErrorAlert } from './createComponentButton.js';
+import { DevfileListItem } from './devfileListItem.js';
+import { PortNumberInput } from './portNumberInput.js';
+import { ValidationStatus } from './validationResult.js';
 
 type Message = {
     action: string;

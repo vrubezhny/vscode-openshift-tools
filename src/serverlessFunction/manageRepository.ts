@@ -4,9 +4,9 @@
  *-----------------------------------------------------------------------------------------------*/
 
 import { Disposable, window } from 'vscode';
-import { Odo } from '../odo/odoWrapper';
-import sendTelemetry from '../telemetry';
-import { ServerlessCommand } from './commands';
+import { Odo } from '../odo/odoWrapper.js';
+import sendTelemetry from '../telemetry.js';
+import { ServerlessCommand } from './commands.js';
 
 export class ManageRepository implements Disposable {
     private static instance: ManageRepository;

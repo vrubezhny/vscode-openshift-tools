@@ -4,9 +4,9 @@
  *-----------------------------------------------------------------------------------------------*/
 
 import { Uri } from 'vscode';
-import { ComponentTypeDescription, Registry } from '../../odo/componentType';
-import { StarterProject } from '../../odo/componentTypeDescription';
-import { ChartResponse } from '../../helm/helmChartType';
+import { ChartResponse } from '../../helm/helmChartType.js';
+import { ComponentTypeDescription, Registry } from '../../odo/componentType.js';
+import { StarterProject } from '../../odo/componentTypeDescription.js';
 
 export interface DefaultProps {
     analytics?: import('@segment/analytics-next').Analytics;

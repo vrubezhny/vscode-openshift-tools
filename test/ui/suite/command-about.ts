@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 
-import { By, EditorView, WebviewView, Workbench } from 'vscode-extension-tester';
-import { activateCommand } from '../common/command-activator';
 import { expect } from 'chai';
-import { OpenshiftTerminalWebviewView } from '../common/ui/webviewView/openshiftTerminalWebviewView';
+import { By, EditorView, WebviewView, Workbench } from 'vscode-extension-tester';
+import { activateCommand } from '../common/command-activator.js';
+import { OpenshiftTerminalWebviewView } from '../common/ui/webviewView/openshiftTerminalWebviewView.js';
 
 export function checkAboutCommand(clusterIsSet: boolean) {
     describe('About Command', () => {

@@ -5,8 +5,8 @@
 
 import { makeStyles } from '@mui/styles';
 import * as React from 'react';
-import errorPageStyle from './errorPage.style';
-import { ErrorProps } from './propertyTypes';
+import errorPageStyle from './errorPage.style.js';
+import { ErrorProps } from './propertyTypes.js';
 
 const errorPageStyleClass = makeStyles(errorPageStyle);
 

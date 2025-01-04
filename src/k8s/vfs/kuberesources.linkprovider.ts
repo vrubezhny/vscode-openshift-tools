@@ -6,13 +6,13 @@
 import * as vscode from 'vscode';
 import { DocumentLinkProvider, Uri } from 'vscode';
 
-import * as querystring from 'querystring';
 import * as _ from 'lodash';
-import { MappingItem, Node, NodeProvider } from './locator-util';
-import * as kuberesources from './kuberesources';
-import * as yl from './yaml-locator';
-import * as jl from './json-locator';
-import { K8S_RESOURCE_SCHEME, K8S_RESOURCE_SCHEME_READONLY, getOutputFormat, helmfsUri, kubefsUri } from './kuberesources.virtualfs';
+import * as querystring from 'querystring';
+import * as jl from './json-locator.js';
+import * as kuberesources from './kuberesources.js';
+import { K8S_RESOURCE_SCHEME, K8S_RESOURCE_SCHEME_READONLY, getOutputFormat, helmfsUri, kubefsUri } from './kuberesources.virtualfs.js';
+import { MappingItem, Node, NodeProvider } from './locator-util.js';
+import * as yl from './yaml-locator.js';
 
 // >>> URI Cache >>>
 

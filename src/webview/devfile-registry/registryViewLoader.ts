@@ -5,16 +5,16 @@
 import * as fs from 'fs/promises';
 import * as path from 'path';
 import { ColorTheme, Disposable, Uri, ViewColumn, WebviewPanel, commands, extensions, window, workspace } from 'vscode';
-import { Registry } from '../../odo/componentType';
-import { Odo } from '../../odo/odoWrapper';
-import { ComponentTypesView } from '../../registriesView';
-import sendTelemetry from '../../telemetry';
-import { ExtensionID } from '../../util/constants';
-import { getInitialWorkspaceFolder, selectWorkspaceFolder } from '../../util/workspace';
-import { vsCommand } from '../../vscommand';
-import { isValidProjectFolder, sendDevfileForVersion, sendUpdatedCapabilities, sendUpdatedDevfileInfos, sendUpdatedRegistries, sendUpdatedTags, validateName, validatePortNumber } from '../common-ext/createComponentHelpers';
-import { loadWebviewHtml } from '../common-ext/utils';
-import { TemplateProjectIdentifier } from '../common/devfile';
+import { Registry } from '../../odo/componentType.js';
+import { Odo } from '../../odo/odoWrapper.js';
+import { ComponentTypesView } from '../../registriesView.js';
+import sendTelemetry from '../../telemetry.js';
+import { ExtensionID } from '../../util/constants.js';
+import { getInitialWorkspaceFolder, selectWorkspaceFolder } from '../../util/workspace.js';
+import { vsCommand } from '../../vscommand.js';
+import { isValidProjectFolder, sendDevfileForVersion, sendUpdatedCapabilities, sendUpdatedDevfileInfos, sendUpdatedRegistries, sendUpdatedTags, validateName, validatePortNumber } from '../common-ext/createComponentHelpers.js';
+import { loadWebviewHtml } from '../common-ext/utils.js';
+import { TemplateProjectIdentifier } from '../common/devfile.js';
 
 window.onDidChangeActiveColorTheme(function (editor: ColorTheme) {
     if (RegistryViewLoader.panel) {

@@ -7,7 +7,7 @@ import * as vscode from 'vscode';
 
 import * as YAML from 'js-yaml';
 import { findNodeAtPosition, parse } from 'node-yaml-parser';
-import { MappingItem, Node, NodeProvider } from './locator-util';
+import { MappingItem, Node, NodeProvider } from './locator-util.js';
 
 export function isMapping(node: YamlNode): node is YamlMap {
     return node.kind === 'MAPPING';

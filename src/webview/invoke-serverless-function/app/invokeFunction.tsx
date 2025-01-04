@@ -21,8 +21,8 @@ import {
     Typography,
 } from '@mui/material';
 import * as React from 'react';
-import { LoadScreen } from '../../common/loading';
-import { InvokeFunctionPageProps } from '../../common/propertyTypes';
+import { LoadScreen } from '../../common/loading.js';
+import { InvokeFunctionPageProps } from '../../common/propertyTypes.js';
 import './home.scss';
 
 export const InvokeFunctionOrLoading = () => {

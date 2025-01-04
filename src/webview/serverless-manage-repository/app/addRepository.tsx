@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See LICENSE file in the project root for license information.
  *-----------------------------------------------------------------------------------------------*/
 
-import * as React from 'react';
 import { Button, Stack, TextField } from '@mui/material';
-import { DefaultProps } from '../../common/propertyTypes';
+import * as React from 'react';
+import { DefaultProps } from '../../common/propertyTypes.js';
 import './home.scss';
-import { VSCodeMessage } from './vsCodeMessage';
+import { VSCodeMessage } from './vsCodeMessage.js';
 
 export class AddRepository extends React.Component<DefaultProps, {
     input: {

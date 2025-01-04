@@ -7,12 +7,12 @@ import FolderOpenIcon from '@mui/icons-material/FolderOpen';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { CircularProgress, Container, Stack, Theme, ThemeProvider, Typography } from '@mui/material';
 import * as React from 'react';
-import { DevfileExplanation } from '../../common/devfileExplanation';
-import { FromTemplateProject } from '../../common/fromTemplateProject';
-import OptionCard from '../../common/optionCard';
-import { createVSCodeTheme } from '../../common/vscode-theme';
-import { FromExistingGitRepo } from './fromExistingGitRepo';
-import { FromLocalCodebase } from './fromLocalCodebase';
+import { DevfileExplanation } from '../../common/devfileExplanation.js';
+import { FromTemplateProject } from '../../common/fromTemplateProject.js';
+import OptionCard from '../../common/optionCard.js';
+import { createVSCodeTheme } from '../../common/vscode-theme.js';
+import { FromExistingGitRepo } from './fromExistingGitRepo.js';
+import { FromLocalCodebase } from './fromLocalCodebase.js';
 
 interface VSCodeMessage {
     action: string;
@@ -76,7 +76,7 @@ export default function CreateComponent() {
 
     const [theme, setTheme] = React.useState<Theme>(createVSCodeTheme('light'));
     const [currentView, setCurrentView] = React.useState<PageId>('home');
-    const [folderPath, setFolderPath] = React.useState<string>(undefined);
+    const [folderPath, setFolderPath] = React.useState<string | undefined>(undefined);
     const [isInitialized, setInitialized] = React.useState<boolean>(false);
 
     const respondToMessage = function (message: MessageEvent<VSCodeMessage>) {

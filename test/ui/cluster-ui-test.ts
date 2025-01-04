@@ -5,12 +5,12 @@
 
 import * as fs from 'fs-extra';
 import * as path from 'path';
-import { checkExtension } from './suite/extension';
-import { checkOpenshiftView } from './suite/openshift';
-import { loginTest } from './suite/login';
-import { projectTest } from './suite/project';
-import { kubernetesContextTest } from './suite/kubernetesContext';
-import { backupKubeConfig, loadKubeConfigFromBackup } from './common/kubeConfigUtils';
+import { backupKubeConfig, loadKubeConfigFromBackup } from './common/kubeConfigUtils.js';
+import { checkExtension } from './suite/extension.js';
+import { kubernetesContextTest } from './suite/kubernetesContext.js';
+import { loginTest } from './suite/login.js';
+import { checkOpenshiftView } from './suite/openshift.js';
+import { projectTest } from './suite/project.js';
 
 describe('Extension cluster-dependant UI tests', function () {
     const contextFolder = path.join(__dirname, 'context');

@@ -5,12 +5,12 @@
 
 /* eslint-disable no-console */
 
-import * as fs from 'fs-extra';
-import * as hasha from 'hasha';
+import fs from 'fs-extra';
+import hasha from 'hasha';
 import * as mkdirp from 'mkdirp';
 import * as path from 'path';
-import { Archive } from './archive';
-import { DownloadUtil } from './download';
+import { Archive } from './archive.js';
+import { DownloadUtil } from './download.js';
 
 export interface PlatformData {
     url: string;

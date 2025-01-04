@@ -18,19 +18,19 @@ import {
     WelcomeContentButton,
     Workbench,
 } from 'vscode-extension-tester';
-import { notificationExists } from '../common/conditions';
-import { BUTTONS, INPUTS, MENUS, NOTIFICATIONS, VIEWS } from '../common/constants';
-import { collapse } from '../common/overdrives';
+import { notificationExists } from '../common/conditions.js';
+import { BUTTONS, INPUTS, MENUS, NOTIFICATIONS, VIEWS } from '../common/constants.js';
+import { collapse } from '../common/overdrives.js';
 import {
     CreateComponentWebView,
     GitProjectPage,
     LocalCodeBasePage,
     SetNameAndFolderPage,
-} from '../common/ui/webview/newComponentWebViewEditor';
+} from '../common/ui/webview/newComponentWebViewEditor.js';
 import {
     RegistryWebViewDevfileWindow,
     RegistryWebViewEditor,
-} from '../common/ui/webview/registryWebViewEditor';
+} from '../common/ui/webview/registryWebViewEditor.js';
 
 //TODO: Add more checks for different elements
 export function testCreateComponent(path: string) {

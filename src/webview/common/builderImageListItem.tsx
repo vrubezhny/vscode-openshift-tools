@@ -4,8 +4,8 @@
  *-----------------------------------------------------------------------------------------------*/
 import { Box, Stack, SvgIcon, Typography } from '@mui/material';
 import * as React from 'react';
-import { BuilderImage } from './buildImage';
-import { getIcons as getLogo } from './builderImageLogo';
+import { BuilderImage } from './buildImage.js';
+import { getIcons as getLogo } from './builderImageLogo.js';
 
 export type BuilderImageListItemProps = {
     builderImage: BuilderImage;

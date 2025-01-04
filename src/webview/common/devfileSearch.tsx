@@ -33,13 +33,13 @@ import CodeMirror from '@uiw/react-codemirror';
 import { every } from 'lodash';
 import * as React from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
-import { DevfileData, DevfileInfo, DevfileRegistryInfo } from '../../devfile-registry/devfileInfo';
-import { TemplateProjectIdentifier } from '../common/devfile';
-import { DevfileExplanation } from './devfileExplanation';
-import { DevfileListItem } from './devfileListItem';
-import { ErrorPage } from './errorPage';
-import { LoadScreen } from './loading';
-import { vsDarkCodeMirrorTheme, vsLightCodeMirrorTheme } from './vscode-theme';
+import { DevfileData, DevfileInfo, DevfileRegistryInfo } from '../../devfile-registry/devfileInfo.js';
+import { TemplateProjectIdentifier } from '../common/devfile.js';
+import { DevfileExplanation } from './devfileExplanation.js';
+import { DevfileListItem } from './devfileListItem.js';
+import { ErrorPage } from './errorPage.js';
+import { LoadScreen } from './loading.js';
+import { vsDarkCodeMirrorTheme, vsLightCodeMirrorTheme } from './vscode-theme.js';
 
 // in order to add custom named colours for use in Material UI's `color` prop,
 // you need to use module augmentation.

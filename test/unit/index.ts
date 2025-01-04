@@ -8,7 +8,7 @@ import { sync } from 'glob';
 import Mocha from 'mocha';
 import * as paths from 'path';
 import * as sourceMapSupport from 'source-map-support';
-import { CoverageRunner, TestRunnerOptions } from '../coverage';
+import { CoverageRunner, TestRunnerOptions } from '../coverage.js';
 
 sourceMapSupport.install();
 

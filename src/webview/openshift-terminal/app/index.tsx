@@ -5,8 +5,8 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { TerminalMultiplexer } from './terminalMultiplexer';
-import { WebviewErrorBoundary } from '../../common/webviewErrorBoundary';
+import { WebviewErrorBoundary } from '../../common/webviewErrorBoundary.js';
+import { TerminalMultiplexer } from './terminalMultiplexer.js';
 
 ReactDOM.render(
     <WebviewErrorBoundary webviewName='openshiftTerminal'>

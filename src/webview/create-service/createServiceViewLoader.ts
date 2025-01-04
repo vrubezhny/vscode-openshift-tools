@@ -8,16 +8,16 @@ import { JSONSchema7 } from 'json-schema';
 import * as _ from 'lodash';
 import * as path from 'path';
 import * as vscode from 'vscode';
-import { OpenShiftExplorer } from '../../explorer';
-import { ClusterServiceVersionKind, CustomResourceDefinitionKind } from '../../k8s/olm/types';
-import { Oc } from '../../oc/ocWrapper';
-import { getServiceKindStubs } from '../../openshift/serviceHelpers';
-import { ExtensionID } from '../../util/constants';
-import { loadWebviewHtml } from '../common-ext/utils';
+import { OpenShiftExplorer } from '../../explorer.js';
+import { ClusterServiceVersionKind, CustomResourceDefinitionKind } from '../../k8s/olm/types.js';
+import { Oc } from '../../oc/ocWrapper.js';
+import { getServiceKindStubs } from '../../openshift/serviceHelpers.js';
+import { ExtensionID } from '../../util/constants.js';
+import { loadWebviewHtml } from '../common-ext/utils.js';
 import type {
     CustomResourceDefinitionStub,
     SpecDescriptor
-} from '../common/createServiceTypes';
+} from '../common/createServiceTypes.js';
 
 export default class CreateServiceViewLoader {
     private static panel: vscode.WebviewPanel;

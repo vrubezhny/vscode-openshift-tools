@@ -9,8 +9,8 @@ import * as path from 'path';
 import * as sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import * as tmp from 'tmp';
-import { Archive } from '../../../src/downloadUtil/archive';
-import * as targz from '../../../src/util/utils';
+import { Archive } from '../../../src/downloadUtil/archive.js';
+import * as targz from '../../../src/util/utils.js';
 
 const {expect} = chai;
 chai.use(sinonChai);

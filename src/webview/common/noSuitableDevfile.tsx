@@ -4,7 +4,7 @@
  *-----------------------------------------------------------------------------------------------*/
 import { Alert } from '@mui/material';
 import React from 'react';
-import {  WarningProp } from './propertyTypes';
+import { WarningProp } from './propertyTypes.js';
 
 export const NoSuitableWarning: React.FC<WarningProp> = ({
     isComponent = true
