@@ -25,7 +25,7 @@ export class ComponentInfo implements ComponentWorkspaceFolder {
         throw new Error('Method not implemented.');
     }
 
-    getChildren(): ComponentInfo[] {
+    async getChildren(): Promise<ComponentInfo[]> {
         return [];
     }
 }
@@ -59,7 +59,7 @@ class ComponentInfoCommand extends ComponentInfo implements CommandProvider {
 class ComponentInfoCommands extends ComponentInfo {
     private children : ComponentInfo[];
 
-    getChildren(): ComponentInfo[] {
+    async getChildren(): Promise<ComponentInfo[]> {
         if (!this.children) {
             const thisCommands = this.component.devfileData.devfile.commands;
             if (thisCommands === undefined) {
@@ -85,7 +85,7 @@ class ComponentInfoCommands extends ComponentInfo {
 class ComponentInfoRoot extends ComponentInfo {
     private children : ComponentInfo[];
 
-    getChildren(): ComponentInfo[] {
+    async getChildren(): Promise<ComponentInfo[]> {
         if (!this.children) {
             const thisCommands = this.component.devfileData.devfile.commands;
             if (thisCommands === undefined) {
