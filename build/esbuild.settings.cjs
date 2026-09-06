@@ -22,7 +22,6 @@ const webviews = [
 ];
 
 const esmImportTargets = {
-  'clipboardy': { entry: 'node_modules/clipboardy/index.js', outfile: 'out/esm/clipboardy.cjs' },
   'got': { entry: 'node_modules/got/dist/source/index.js', outfile: 'out/esm/got.cjs' },
   'uuid': { entry: 'node_modules/uuid/dist/index.js', outfile: 'out/esm/uuid.cjs' },
   '@kubernetes/client-node': { entry: 'node_modules/@kubernetes/client-node/dist/index.js', outfile: 'out/esm/k8s-client-node.cjs' },

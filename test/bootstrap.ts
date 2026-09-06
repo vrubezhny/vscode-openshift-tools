@@ -21,7 +21,6 @@ while (projectRoot !== path.dirname(projectRoot)) {
 // --- ESM module aliases mapping
 // Use absolute paths based on project root
 const aliases = {
-  'clipboardy': path.join(projectRoot, 'out/esm/clipboardy.cjs'),
   'got': path.join(projectRoot, 'out/esm/got.cjs'),
   'uuid': path.join(projectRoot, 'out/esm/uuid.cjs'),
   '@kubernetes/client-node': path.join(projectRoot, 'out/esm/k8s-client-node.cjs'),
